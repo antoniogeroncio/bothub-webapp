@@ -11,17 +11,23 @@
   width: 95%;
   position: relative;
   margin: 0 auto;
+  line-height: 22px;
 }
 
 .footer__content {
   padding: 50px 15px 30px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   .brand {
     width: 140px;
     margin-bottom: 40px;
     img {
       width: 140px;
+    }
+
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
     }
   }
 }
@@ -33,6 +39,16 @@
 .footer-col {
   width: 33.33%;
   padding: 0 30px;
+
+  @media (max-width: 992px) {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //border-bottom: 1px solid red;
+  }
 }
 
 .footer-col__title {
@@ -136,6 +152,12 @@
 
 .locality {
   padding-bottom: 20px;
+}
+
+.tel {
+  @media (max-width: 992px) {
+    margin-bottom: 20px;
+  }
 }
 
 //--------------------------------
