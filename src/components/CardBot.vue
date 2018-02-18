@@ -1,19 +1,24 @@
 <template>
     <div class="card-bot">
+
       <ul class="bot-card__summary">
-        <li class="bot-summary__item">6547 issues <i class="material-icons">lightbulb_outline</i></li>
-        <li class="bot-summary__item">547 copy <i class="material-icons">content_copy</i></li>
-        <li class="bot-summary__item">321 stars <i class="material-icons">grade</i></li>
+        <li class="bot-summary__item"><span class="bot-summary__item-label">6547 issues </span><i class="material-icons">lightbulb_outline</i></li>
+        <li class="bot-summary__item"><span class="bot-summary__item-label">547 copy </span><i class="material-icons">content_copy</i></li>
+        <li class="bot-summary__item"><span class="bot-summary__item-label">321 stars </span><i class="material-icons">grade</i></li>
       </ul>
+
       <up-down-vote/>
+
       <div class="card-bot__image">
         <img src="../assets/images/avatar.png" alt="">
       </div>
+
       <div class="card-bot__content">
         <div class="card-bot__header">
           <span class="card-bot__title">{{ bot_title }}</span>
           <span class="card-bot__author">{{ bot_author }}</span>
         </div>
+
         <div class="card-bot__info">
           <div class="card-bot__updated">
             Updated 2 weeks ago by {{ bot_author_name }}
@@ -28,9 +33,11 @@
             <li class="flags-item"><img src="../assets/images/flags/DE.png" alt="Flag DE"></li>
           </ul>
         </div>
+
         <div class="card-bot__excerpt">
           {{ bot_text }}
         </div>
+
         <div class="card-bot__badge">
           <span class="badge">cheers</span>
           <span class="badge">bug</span>
@@ -41,6 +48,7 @@
           <span class="badge">...</span>
         </div>
       </div>
+
       <div class="bot-action">
         <a href="#" class="btn btn-update">Update <i class="material-icons">refresh</i></a>
       </div>
@@ -68,36 +76,66 @@ export default {
 
 <style scoped lang="scss">
   @import "../assets/scss/_colors";
+
   .card-bot__list {
-    /*Config for large devices*/
+
+    // Config for large devices
+
     @media (min-width: 2000px) {
       display: flex;
       align-items: stretch;
       justify-content: center;
     }
   }
+
+  //------------------------------
+  // Card Bot
+  //------------------------------
   .card-bot {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     background-color: #FFF;
     border-radius: 20px;
     padding: 20px;
     position: relative;
     transition: all .2s ease-in-out;
-    align-items: center;
     margin: 30px 15px;
+
     &:last-child {
       margin-bottom: 0;
     }
     &:hover {
       box-shadow: 0 0 20px 5px rgba($dark-green,.1);
     }
-    /*Config for large devices*/
+
+    // Config for large devices
+
     @media (min-width: 2000px) {
       width: calc(50% - 40px);
       height: 10vh;
     }
+
+    @media (max-width: 768px) {
+      margin: 15px 0;
+      width: 100%;
+      align-items: flex-start;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+    }
   }
+
+  //------------------------------
+  // Bot Title
+  //------------------------------
   .card-bot__title,
   .card-bot__author {
     font-weight: 500;
@@ -105,9 +143,11 @@ export default {
     display: inline-block;
     margin-bottom: 7px;
   }
+
   .card-bot__author {
     position: relative;
     padding-left: 8px;
+
     &::before {
       content: '/';
       display: block;
@@ -118,6 +158,10 @@ export default {
       top: 0;
     }
   }
+
+  //------------------------------
+  // Bot Summary
+  //------------------------------
   .bot-card__summary {
     color: $dark-grey;
     margin: 0;
@@ -128,67 +172,178 @@ export default {
     right: 28px;
     display: flex;
     justify-content: flex-end;
+
     .bot-summary__item {
       display: flex;
       align-items: center;
       font-size: 14px;
       margin-left: 30px;
+
       .material-icons {
         margin-left: 10px;
         font-size: 16px;
       }
     }
+
+    @media (max-width: 768px) {
+      top: inherit;
+      right: inherit;
+      bottom: 20px;
+      left: 140px;
+
+      .bot-summary__item {
+        .material-icons {
+          margin-left: 0;
+          font-size: 18px;
+        }
+        margin-left: 0;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .bot-summary__item-label {
+        display: none;
+      }
+    }
+
+    @media (max-width: 400px) {
+      left: inherit;
+    }
   }
+
+  //------------------------------
+  // Bot Bot Info
+  //------------------------------
   .card-bot__info {
     display: flex;
     align-items: center;
+
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
+
   .card-bot__updated {
     font-size: 12px;
     color: $dark-grey;
     margin-right: 10px;
+
+    @media (max-width: 768px) {
+      background-color: #fff;
+      width: 100%;
+      margin-right: 0;
+    }
   }
+
+  //------------------------------
+  // Bot Flags
+  //------------------------------
   .card-bot__flags {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      background-color: #fff;
+      width: 100%;
+      margin-top: 7px;
+    }
+
+    @media (max-width: 400px) {
+      width: auto;
+    }
+
     .flags-item {
       width: 15px;
-      margin: 0 3px;
+      margin: 0 6px 0 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
       img {
         width: 100%;
       }
     }
   }
+
+  //------------------------------
+  // Bot Image
+  //------------------------------
   .card-bot__image {
     width: 134px;
     height: 134px;
     margin: 0 30px 0 -10px;
     overflow: hidden;
     border-radius: 100%;
+
     img {
       width: 100%;
     }
+
+    @media (max-width: 768px) {
+      width: 100px;
+      height: 100px;
+      margin: 0 20px 0 0;
+    }
+
+    @media (max-width: 400px) {
+      margin: 0 0 20px 0;
+    }
   }
+
+  //------------------------------
+  // Bot Content
+  //------------------------------
+  .card-bot__content {
+    width: calc(100% - 264px);
+
+    @media (max-width: 768px) {
+      width: calc(100% - 120px);
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 400px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   .card-bot__excerpt {
     margin: 25px 0;
     font-size: 15px;
     line-height: 20px;
   }
-  .card-bot__content {
-    width: calc(100% - 264px);
-  }
+
+  //------------------------------
+  // Bot Badges
+  //------------------------------
   .card-bot__badge {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+
+  //------------------------------
+  // Bot Actions
+  //------------------------------
   .bot-action {
     position: absolute;
     bottom: 20px;
     right: 20px;
     z-index: 2;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 </style>

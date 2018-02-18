@@ -9,13 +9,16 @@
     </a>
   </div>
 </template>
-<script></script>
+
 <style lang="scss" scoped>
 @import '../assets/scss/_colors';
+
 .up-down-vote {
   display: flex;
   flex-direction: column;
   align-items: center;
+  display: none;
+
   .reputation-value {
     width: 100px;
     font-size: 20px;
@@ -25,12 +28,21 @@
     text-align: center;
     background-color: #F2F2F2;
     box-shadow: inset 0 2px 6px -2px #929292;
+
     &-active {
       background-color: $dark-green;
       box-shadow: inset 0 2px 6px 0 #1b756a;
       color: #FFF;
     }
+
+    @media (max-width: 768px) {
+      border-radius: 20px;
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
   }
+
   .vote-button {
     color: $dark-green2;
     font-size: 30px;
