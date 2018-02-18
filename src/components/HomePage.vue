@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <top-bar></top-bar>
+    <top-bar/>
 
     <div class="container">
       <search></search>
@@ -8,7 +8,7 @@
 
     <div class="bot-category">
       <div class="container">
-          <bot-category></bot-category>
+          <bot-category/>
       </div>
     </div>
 
@@ -17,28 +17,28 @@
         <h3 class="section-title">
           {{ best_of_month_title }}
         </h3>
-        <card-bot></card-bot>
-        <card-bot></card-bot>
-        <card-bot></card-bot>
+        <card-bot/>
+        <card-bot/>
+        <card-bot/>
       </div>
     </section>
 
     <!--<div class="badge badge&#45;&#45;danger">Danger</div>-->
 
-    <cta></cta>
+    <cta/>
 
     <section class="top-bots">
       <div class="container">
         <h3 class="section-title">
           {{ top_bots }}
         </h3>
-        <card-bot></card-bot>
-        <card-bot></card-bot>
-        <card-bot></card-bot>
+        <card-bot/>
+        <card-bot/>
+        <card-bot/>
       </div>
     </section>
 
-    <cta></cta>
+    <cta/>
 
     <section class="top-authors">
       <h3 class="section-title">
@@ -46,14 +46,14 @@
       </h3>
       <div class="container">
         <div class="authors-list">
-          <card-author></card-author>
-          <card-author></card-author>
-          <card-author></card-author>
+          <card-author/>
+          <card-author/>
+          <card-author/>
         </div>
       </div>
     </section>
 
-    <home-footer></home-footer>
+    <home-footer/>
   </div>
 </template>
 

@@ -5,7 +5,7 @@
         <li class="bot-summary__item">547 copy <i class="material-icons">content_copy</i></li>
         <li class="bot-summary__item">321 stars <i class="material-icons">grade</i></li>
       </ul>
-      <up-down-vote></up-down-vote>
+      <up-down-vote/>
       <div class="card-bot__image">
         <img src="../assets/images/avatar.png" alt="">
       </div>
