@@ -37,6 +37,7 @@ export default {
 
 <style scoped lang="scss">
   @import '../assets/scss/_colors';
+
   .card-author {
     background-color: #fff;
     border-radius: 10px;
@@ -53,40 +54,66 @@ export default {
       width: 100%;
       margin: 10px 0;
     }
+
+    @media (max-width: 320px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
+
   .card-author__image {
     width: 100px;
+    height: 100px;
     margin-right: 20px;
     overflow: hidden;
     border-radius: 10px;
+
     img {
       width: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 320px) {
+      margin-bottom: 20px;
+      margin-right: 0;
     }
   }
+
   .card-author__info {
     width: calc(100% - 120px);
     font-size: 10px;
     line-height: 16px;
+
+    @media (max-width: 320px) {
+      width: 100%;
+      text-align: center;
+    }
   }
+
   .author__name {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 10px;
   }
+
   .author__location {
     display: block;
   }
+
   .author__joined {
     display: block;
   }
+
   .author__url {
     display: block;
     color: #000;
     text-decoration: none;
+
     &:hover {
       color: $primary-color;
     }
   }
+
   .author__bot-counts {
     display: block;
     margin-top: 10px;
