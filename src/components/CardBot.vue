@@ -2,12 +2,15 @@
     <div class="card-bot">
 
       <ul class="bot-card__summary">
-        <li class="bot-summary__item"><span class="bot-summary__item-label">6547 issues </span><i class="material-icons">lightbulb_outline</i></li>
-        <li class="bot-summary__item"><span class="bot-summary__item-label">547 copy </span><i class="material-icons">content_copy</i></li>
-        <li class="bot-summary__item"><span class="bot-summary__item-label">321 stars </span><i class="material-icons">grade</i></li>
+        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">6547 issues </span><i class="material-icons">error_outline</i></a></li>
+        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">547 copy </span><i class="material-icons">content_copy</i></a></li>
+        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">321 stars </span><i class="material-icons">grade</i></a></li>
+        <li class="bot-summary__item icon-update"><a href="#"><i class="material-icons">refresh</i></a></li>
       </ul>
 
-      <up-down-vote/>
+      <div class="bot-score">
+        <up-down-vote/>
+      </div>
 
       <div class="card-bot__image">
         <img src="../assets/images/avatar.png" alt="">
@@ -15,13 +18,13 @@
 
       <div class="card-bot__content">
         <div class="card-bot__header">
-          <span class="card-bot__title">{{ bot_title }}</span>
-          <span class="card-bot__author">{{ bot_author }}</span>
+          <a href="#" class="card-bot__title">{{ bot_title }}</a>
+          <!--<span class="card-bot__author">{{ bot_author }}</span>-->
         </div>
 
         <div class="card-bot__info">
           <div class="card-bot__updated">
-            Updated 2 weeks ago by {{ bot_author_name }}
+            Updated 2 weeks ago by <a class="url-author" href="#">{{ bot_author_name }}</a>
           </div>
           <ul class="card-bot__flags">
             <li class="flags-item"><img src="../assets/images/flags/EN.png" alt="Flag ES"></li>
@@ -142,6 +145,13 @@ export default {
     font-size: 18px;
     display: inline-block;
     margin-bottom: 7px;
+    color: $brand-color;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary-color;
+    }
   }
 
   .card-bot__author {
@@ -183,13 +193,32 @@ export default {
         margin-left: 10px;
         font-size: 16px;
       }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: $dark-grey;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      @media (max-width: 992px) {
+        margin-left: 10px;
+        .material-icons {
+          margin-left: 4px;
+        }
+      }
     }
 
     @media (max-width: 768px) {
       top: inherit;
       right: inherit;
       bottom: 20px;
-      left: 140px;
+      left: 20px;
 
       .bot-summary__item {
         .material-icons {
@@ -198,6 +227,10 @@ export default {
         }
         margin-left: 0;
         margin-right: 20px;
+
+        @media (max-width: 400px) {
+          margin-right: 10px;
+        }
 
         &:last-child {
           margin-right: 0;
@@ -209,8 +242,11 @@ export default {
       }
     }
 
-    @media (max-width: 400px) {
-      left: inherit;
+    .icon-update {
+      display: none;
+      @media (max-width: 768px) {
+        display: initial;
+      }
     }
   }
 
@@ -236,6 +272,16 @@ export default {
       background-color: #fff;
       width: 100%;
       margin-right: 0;
+    }
+  }
+
+  .url-author {
+    color: $dark-grey;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary-color;
     }
   }
 
@@ -282,9 +328,16 @@ export default {
     margin: 0 30px 0 -10px;
     overflow: hidden;
     border-radius: 100%;
+    position: relative;
+    z-index: 2;
 
     img {
       width: 100%;
+    }
+
+    @media (max-width: 992px) {
+      width: 100px;
+      height: 100px;
     }
 
     @media (max-width: 768px) {
@@ -344,6 +397,18 @@ export default {
 
     @media (max-width: 768px) {
       display: none;
+    }
+  }
+
+  .bot-score {
+    position: relative;
+    z-index: 1;
+    @media (max-width: 768px) {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
     }
   }
 </style>

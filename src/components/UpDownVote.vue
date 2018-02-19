@@ -17,7 +17,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  display: none;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
 
   .reputation-value {
     width: 100px;
@@ -35,11 +39,17 @@
       color: #FFF;
     }
 
+    @media (max-width: 992px) {
+      width: auto;
+      padding: 5px 20px;
+    }
+
     @media (max-width: 768px) {
       border-radius: 20px;
-      position: relative;
       bottom: 0;
       right: 0;
+      width: auto;
+      padding: 5px 20px;
     }
   }
 
@@ -48,6 +58,16 @@
     font-size: 30px;
     background-color: transparent;
     border: 0;
+
+    @media (max-width: 992px) {
+      width: 30px;
+      height: 40px;
+      text-align: center;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 </style>
