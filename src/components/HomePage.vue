@@ -2,8 +2,13 @@
   <div class="main">
     <top-bar/>
 
+    <h1 class="home-title">
+      Robot Society
+      <span class="home-subtitle">Train yours!</span>
+    </h1>
+
     <div class="container">
-      <search></search>
+      <search/>
     </div>
 
     <div class="bot-category">
@@ -90,6 +95,24 @@ export default {
 <style scoped lang="scss">
   @import '../assets/scss/_variables';
   @import '../assets/scss/_colors';
+
+  .home-title {
+    /*background-color: #ccc;*/
+    color: #FFF;
+    font-weight: 900;
+    text-align: center;
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .home-subtitle {
+    text-transform: uppercase;
+    font-weight: 100;
+    display: block;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
   .best-of-month,
   .top-bots,
   .top-authors {
@@ -106,7 +129,7 @@ export default {
     background-color: #F8F8F8;
   }
 
-  /*Authors List*/
+  // Authors List
   .authors-list {
     display: flex;
     flex-wrap: wrap;

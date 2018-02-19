@@ -48,6 +48,10 @@ export default {
 
     .btn {
       padding: 10px 20px;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
