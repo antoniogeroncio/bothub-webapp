@@ -59,12 +59,22 @@ button {
   }
 
   &-primary {
-    border: 1px solid $dark-grey;
+    border: 1px solid $light-green;
+    text-transform: none;
+    font-size: 14px;
+    background-color: $light-green;
+    color: $dark-green2;
+
+    &:hover {
+      background-color: $dark-green2;
+      color: #ffffff;
+      border: 1px solid $dark-green2;
+    }
   }
 
 
   &-update {
-    border-radius: 50px;
+    //border-radius: 50px;
     color: $apple-green;
     background-color: transparent;
     border-color: $apple-green;

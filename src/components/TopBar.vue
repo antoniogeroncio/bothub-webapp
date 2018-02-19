@@ -6,7 +6,7 @@
     </div>
 
     <div class="topbar-action-buttom">
-      <a href="#" class="btn">Start your bot</a>
+      <a href="#" class="btn btn-primary">Start your bot</a>
     </div>
 
     <div class="topbar-avatar">
@@ -23,6 +23,7 @@ export default {
 
 <style scoped lang="scss">
   @import '../assets/scss/_colors';
+
   .topbar {
     background-color: transparent;
     position: relative;
@@ -30,26 +31,26 @@ export default {
     align-items: center;
     height: 60px;
   }
+
   .topbar-brand {
     width: 140px;
     position: relative;
     left: 30px;
+
     img  {
       width: 140px;
     }
   }
+
   .topbar-action-buttom {
     position: absolute;
     right: 90px;
+
     .btn {
-      color: $dark-green2;
       padding: 10px 20px;
-      text-transform: none;
-      font-size: 14px;
-      background-color: $light-green;
-      border-color: $light-green;
     }
   }
+
   .topbar-avatar {
     width: 44px;
     height: 44px;
@@ -57,8 +58,11 @@ export default {
     border-radius: 100%;
     position: absolute;
     right: 30px;
+    border: 2px solid #fff;
+
     img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }

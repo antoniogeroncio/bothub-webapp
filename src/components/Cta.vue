@@ -6,7 +6,7 @@
         for and by developers. Are you a developers
         Would you like to collaborate.
       </p>
-      <a href="#" class="btn">Start your Bot</a>
+      <a href="#" class="btn btn-primary">Start your Bot</a>
     </div>
   </section>
 </template>
