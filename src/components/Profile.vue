@@ -71,10 +71,8 @@ export default {
       author_bot_stars: '160'
     }
   }
-
 }
 </script>
-
 
 <style scoped lang="scss">
   @import '../assets/scss/_variables';
@@ -98,10 +96,6 @@ export default {
       padding: 20px;
       display: flex;
       margin: 15px;
-
-      @media (max-width: 992px) {
-        // width: calc(50% - 30px);
-      }
 
       @media (max-width: 768px) {
         width: 100%;
