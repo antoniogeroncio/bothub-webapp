@@ -97,7 +97,6 @@ export default {
   @import '../assets/scss/_colors';
 
   .home-title {
-    /*background-color: #ccc;*/
     color: #FFF;
     font-weight: 900;
     text-align: center;
