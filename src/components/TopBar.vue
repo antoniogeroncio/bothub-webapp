@@ -2,7 +2,9 @@
   <div class="topbar">
 
     <div class="topbar-brand">
+      <router-link to="/">
       <img src="../assets/images/logo-white.svg" alt="Logo BotHub">
+      </router-link>
     </div>
 
     <div class="topbar-action-buttom">
