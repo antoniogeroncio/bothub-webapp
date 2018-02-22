@@ -75,6 +75,7 @@ export default {
 }
 </script>
 
+
 <style scoped lang="scss">
   @import '../assets/scss/_variables';
   @import '../assets/scss/_colors';
@@ -88,6 +89,10 @@ export default {
     border-radius: 10px;
     margin: 15px;
 
+    @media (max-width: 768px) {
+      margin: 15px 0;
+    }
+
     .profile-author {
       width: 100%;
       padding: 20px;
@@ -99,8 +104,8 @@ export default {
       }
 
       @media (max-width: 768px) {
-        // width: 100%;
-        // margin: 10px 0;
+        width: 100%;
+        margin: 10px 0;
       }
 
       @media (max-width: 320px) {
@@ -139,8 +144,15 @@ export default {
 
     .author__name {
       font-size: 30px;
+      line-height: 30px;
       font-weight: 500;
-      margin: 10px 0;
+      margin: 0 0 10px 0;
+
+      @media (max-width: 500px) {
+        margin: 0 0 10px;
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
 
     .author__location {
