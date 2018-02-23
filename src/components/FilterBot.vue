@@ -1,20 +1,20 @@
 <template>
   <div class="bot-filter">
     <div class="bot-filter__item">
-      <label for="sentences">Sentences</label>
       <input type="checkbox" id="sentences">
+      <label for="sentences">Sentences</label>
     </div>
     <div class="bot-filter__item">
-      <label for="problem">Problem</label>
       <input type="checkbox" id="problem">
+      <label for="problem">Problem</label>
     </div>
     <div class="bot-filter__item">
-      <label for="improvements">Improvements</label>
       <input type="checkbox" id="improvements">
+      <label for="improvements">Improvements</label>
     </div>
     <div class="bot-filter__item">
-      <label for="historic">Historic</label>
       <input type="checkbox" id="historic">
+      <label for="historic">Historic</label>
     </div>
     <button class="btn"><i class="material-icons">search</i></button>
   </div>
