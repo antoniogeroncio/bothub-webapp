@@ -41,6 +41,10 @@ export default {
 
     @media (max-width: 768px) {
       width: 90%;
+      padding: 10px 0;
+    }
+
+    @media (max-width: 400px) {
       flex-direction: column;
       padding: 10px 0;
     }
@@ -49,7 +53,7 @@ export default {
       background-color: transparent;
       border: none;
 
-      @media (max-width: 768px) {
+      @media (max-width: 400px) {
         margin-top: 20px;
       }
 
@@ -66,21 +70,24 @@ export default {
     label {
       cursor: pointer;
       margin-right: 10px;
+      line-height: 12px;
+      font-size: 12px;
     }
 
     @media (max-width: 768px) {
       width: 100%;
-      padding: 10px 10px 0 10px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+
+    }
+
+    @media (max-width: 400px) {
       display: flex;
       flex-direction: column;
-      align-items: center;
 
       label {
         margin: 0 0 10px 0;
-      }
-
-      &:last-child {
-        margin-bottom: 20px;
       }
     }
   }
