@@ -13,6 +13,7 @@ export default {
 
 <style scoped lang="scss">
   @import '../assets/scss/_colors';
+
   .search {
     margin-top: 40px;
     position: relative;
@@ -21,6 +22,7 @@ export default {
     border-radius: 5px;
     background-color: #fff;
   }
+
   .search__input {
     text-align: center;
     border: none;
@@ -28,19 +30,21 @@ export default {
     color: #A5A5A5;
     font-weight: 300;
     height: 50px;
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+    &::-webkit-input-placeholder {
       color: #B7B7B7;
     }
-    &::-moz-placeholder { /* Firefox 19+ */
+    &::-moz-placeholder {
       color: #B7B7B7;
     }
-    &:-ms-input-placeholder { /* IE 10+ */
+    &:-ms-input-placeholder {
       color: #B7B7B7;
     }
-    &:-moz-placeholder { /* Firefox 18- */
+    &:-moz-placeholder {
       color: #B7B7B7;
     }
   }
+
   .search__button {
     position: absolute;
     top: 0;
@@ -49,6 +53,7 @@ export default {
     height: 100%;
     background: transparent;
     border: none;
+
     &:hover {
       color: $primary-color;
     }

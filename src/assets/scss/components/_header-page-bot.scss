@@ -1,0 +1,278 @@
+
+.page-bot__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px 5% 0;
+  position: relative;
+  margin-bottom: 20px;
+
+  //------------------------------
+  // Config for large devices
+  //------------------------------
+
+  @media (min-width: 2000px) {
+    width: calc(50% - 40px);
+    height: 10vh;
+  }
+
+  @media (max-width: 768px) {
+    margin: 15px 0;
+    width: 100%;
+    align-items: flex-start;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  //------------------------------
+  // Bot Title
+  //------------------------------
+  .bot__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    display: inline-block;
+    margin-bottom: 7px;
+    color: $brand-color;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .bot__author {
+    position: relative;
+    padding-left: 8px;
+
+    &::before {
+      content: '/';
+      display: block;
+      width: 8px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  //------------------------------
+  // Bot Summary
+  //------------------------------
+  .bot__summary {
+    color: $dark-grey;
+    margin: 7px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    .bot-summary__item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-left: 30px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      .material-icons {
+        margin-left: 10px;
+        font-size: 16px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: $dark-grey;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      @media (max-width: 992px) {
+        margin-left: 10px;
+        .material-icons {
+          margin-left: 4px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      top: inherit;
+      right: inherit;
+      bottom: 20px;
+      left: 20px;
+
+      .bot-summary__item {
+        .material-icons {
+          margin-left: 0;
+          font-size: 18px;
+        }
+        margin-left: 0;
+        margin-right: 20px;
+
+        @media (max-width: 400px) {
+          margin-right: 10px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .bot-summary__item-label {
+        display: none;
+      }
+    }
+
+    .icon-update {
+      display: none;
+      @media (max-width: 768px) {
+        display: initial;
+      }
+    }
+  }
+
+  //------------------------------
+  // Bot Bot Info
+  //------------------------------
+  .bot__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .bot__updated {
+    color: $dark-grey;
+    margin-right: 10px;
+    font-size: 15px;
+
+    @media (max-width: 768px) {
+      background-color: #fff;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .bot__url,
+  .url-author {
+    color: $dark-grey;
+    transition: color 0.2s ease-in-out;
+    font-size: 15px;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .bot__url {
+    padding-top: 7px;
+
+    a {
+      color: $dark-grey;
+      text-decoration: none;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  //------------------------------
+  // Bot Image
+  //------------------------------
+  .bot__image {
+    width: 134px;
+    height: 134px;
+    margin: 0 30px 0 -10px;
+    overflow: hidden;
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 992px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media (max-width: 768px) {
+      width: 100px;
+      height: 100px;
+      margin: 0 20px 0 0;
+    }
+
+    @media (max-width: 400px) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  //------------------------------
+  // Bot Content
+  //------------------------------
+  .bot__content {
+    width: calc(100% - 264px);
+
+    @media (max-width: 768px) {
+      width: calc(100% - 120px);
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 400px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  //------------------------------
+  // Bot Actions
+  //------------------------------
+  .bot__action {
+    position: absolute;
+    bottom: 20px;
+    right: 5%;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    .btn-action {
+      padding: 7px;
+    }
+  }
+
+  .bot__score {
+    position: relative;
+    z-index: 1;
+    @media (max-width: 768px) {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

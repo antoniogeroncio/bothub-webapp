@@ -4,10 +4,17 @@
   margin: 0 0 0 35px;
   display: flex;
   overflow: hidden;
+
+  &-bot {
+    border-bottom: 1px solid $primary-color;
+    margin: 0;
+    padding: 0 10%;
+    width: 90%;
+  }
 }
 
 .navbar__item {
-  font-size: 12px;
+  font-size: 13px;
   margin: 0 10px;
   position: relative;
   padding-bottom: 20px;
@@ -32,9 +39,9 @@
       content: '';
       height: 15px;
       width: 100%;
-      //background-color: blue;
       position: absolute;
       background: url('../images/menu-border.svg') bottom center no-repeat;
+      background-size: contain;
       bottom: -15px;
       left: 0;
       transition: all 0.2s ease-in-out;
@@ -42,14 +49,19 @@
 
     &:hover,
     &.active{
-      //background: url('../images/menu-border.svg') bottom center no-repeat;
       color: $brand-color;
 
       &::before {
         bottom: 0;
-        background: url('../images/menu-border.svg') bottom center no-repeat;
       }
     }
-
   }
+}
+
+
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

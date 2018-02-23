@@ -18,7 +18,7 @@
 
       <div class="card-bot__content">
         <div class="card-bot__header">
-          <a href="#" class="card-bot__title">{{ bot_title }}</a>
+          <router-link to="update" class="card-bot__title">{{ bot_title }}</router-link>
           <!--<span class="card-bot__author">{{ bot_author }}</span>-->
         </div>
 
@@ -53,7 +53,7 @@
       </div>
 
       <div class="bot-action">
-        <a href="#" class="btn btn-update">Update <i class="material-icons">refresh</i></a>
+        <router-link to="update" class="btn btn-update">Update <i class="material-icons">refresh</i></router-link>
       </div>
     </div>
 </template>

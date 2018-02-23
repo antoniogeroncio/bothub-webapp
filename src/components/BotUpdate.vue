@@ -2,13 +2,51 @@
   <div class="main">
     <top-bar/>
     <div class="container">
-      <div class="page-bot__update">
+      <div class="page-bot">
         <div class="page-bot__header">
-          <card-bot/>
+          <div class="bot-score">
+            <up-down-vote/>
+          </div>
 
-          <ul class="navbar">
+          <div class="bot__image">
+            <img src="../assets/images/avatar.png" alt="">
+          </div>
+
+          <div class="bot__content">
+            <div class="bot__header">
+              <router-link to="update" class="bot__title">{{ bot_title }}</router-link>
+            </div>
+
+            <div class="bot__info">
+              <div class="bot__updated">
+                Updated 2 weeks ago by <router-link class="url-author" to="profile">{{ bot_author_name }}</router-link>
+              </div>
+
+              <div class="bot__url">
+                <router-link to="update">{{ bot_url }}</router-link>
+              </div>
+
+              <ul class="bot__summary">
+                <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">6547 issues </span><i class="material-icons">error_outline</i></a></li>
+                <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">547 copy </span><i class="material-icons">content_copy</i></a></li>
+                <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">321 stars </span><i class="material-icons">grade</i></a></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="bot__action">
+            <router-link to="#" class="btn btn-default btn-action"><i class="material-icons">content_copy</i></router-link>
+            <router-link to="#" class="btn btn-default btn-action"><i class="material-icons">error_outline</i></router-link>
+            <router-link to="update" class="btn btn-default btn-action"><i class="material-icons">refresh</i></router-link>
+          </div>
+        </div>
+
+        <!--Navbar-->
+        <div class="menu">
+          <ul class="navbar navbar-bot">
             <li class="navbar__item">
-              <router-link to="profile" class="active">Description</router-link>
+              <router-link to="profile">Description</router-link>
             </li>
             <li class="navbar__item">
               <router-link to="profile">Bot</router-link>
@@ -20,13 +58,15 @@
               <router-link to="profile">Issues</router-link>
             </li>
             <li class="navbar__item">
-              <router-link to="profile">Update</router-link>
+              <router-link to="profile" class="active">Update</router-link>
             </li>
             <li class="navbar__item">
               <router-link to="profile">Translate</router-link>
             </li>
           </ul>
         </div>
+
+        <filter-bot/>
 
       </div>
     </div>
@@ -39,6 +79,7 @@ import UpDownVote from './UpDownVote'
 import TopBar from './TopBar'
 import HomeFooter from './HomeFooter'
 import CardBot from './CardBot'
+import FilterBot from './FilterBot'
 
 export default {
   name: 'BotUpdate',
@@ -46,25 +87,26 @@ export default {
     CardBot,
     TopBar,
     HomeFooter,
-    UpDownVote
+    UpDownVote,
+    FilterBot
+  },
+  data () {
+    return {
+      bot_title: 'Bot-ZicaVirus',
+      bot_author: 'david_gazques',
+      bot_author_name: 'David Gazques',
+      bot_url: 'http://buthub.io/matthew-russell/bot_pizza_delivey/'
+    }
   }
-  // data () {
-  //   bot_title: 'Bot-ZicaVirus',
-  //   bot_author: 'david_gazques',
-  //   bot_author_name: 'David Gazques',
-  //   bot_text: 'A Swimming hundreds of feet beneath the ocean’s surface in many parts of the world are prolific architects calledlarvaceans. A Swimming hundreds of feet beneath the ocean’s surface in many parts of the architects called.'
-  // }
 }
 </script>
 
 <style lang="scss" scoped>
-  .page-bot__update {
+  .page-bot {
     background-color: #fff;
     margin-bottom: 40px;
     border-radius: 10px;
-  }
-
-  .page-bot__header {
-    background-color: #fff;
+    margin-top: 30px;
+    padding-bottom: 20px;
   }
 </style>
