@@ -39,9 +39,19 @@ export default {
     width: 80%;
     position: relative;
 
+    @media (max-width: 768px) {
+      width: 90%;
+      flex-direction: column;
+      padding: 10px 0;
+    }
+
     .btn {
       background-color: transparent;
       border: none;
+
+      @media (max-width: 768px) {
+        margin-top: 20px;
+      }
 
       &:hover {
         color: $primary-color;
@@ -56,6 +66,22 @@ export default {
     label {
       cursor: pointer;
       margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 10px 10px 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        margin: 0 0 10px 0;
+      }
+
+      &:last-child {
+        margin-bottom: 20px;
+      }
     }
   }
 </style>

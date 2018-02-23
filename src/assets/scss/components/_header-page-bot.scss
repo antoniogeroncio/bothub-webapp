@@ -3,10 +3,10 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border-radius: 20px;
   padding: 20px 5% 0;
   position: relative;
   margin-bottom: 20px;
+  background-color: transparent;
 
   //------------------------------
   // Config for large devices
@@ -139,6 +139,10 @@
       }
     }
 
+    @media (max-width: 400px) {
+      justify-content: center;
+    }
+
     .icon-update {
       display: none;
       @media (max-width: 768px) {
@@ -157,6 +161,7 @@
     width: 70%;
 
     @media (max-width: 768px) {
+      width: 100%;
       flex-direction: column;
     }
   }
@@ -267,6 +272,8 @@
   .bot__score {
     position: relative;
     z-index: 1;
+    display: none !important;
+
     @media (max-width: 768px) {
       position: absolute;
       bottom: 10px;

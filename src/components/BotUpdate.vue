@@ -4,7 +4,7 @@
     <div class="container">
       <div class="page-bot">
         <div class="page-bot__header">
-          <div class="bot-score">
+          <div class="bot__score">
             <up-down-vote/>
           </div>
 
@@ -30,6 +30,7 @@
                 <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">6547 issues </span><i class="material-icons">error_outline</i></a></li>
                 <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">547 copy </span><i class="material-icons">content_copy</i></a></li>
                 <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">321 stars </span><i class="material-icons">grade</i></a></li>
+                <li class="bot-summary__item icon-update"><a href="#"><i class="material-icons">refresh</i></a></li>
               </ul>
             </div>
 
@@ -42,32 +43,8 @@
           </div>
         </div>
 
-        <!--Navbar-->
-        <div class="menu">
-          <ul class="navbar navbar-bot">
-            <li class="navbar__item">
-              <router-link to="profile">Description</router-link>
-            </li>
-            <li class="navbar__item">
-              <router-link to="profile">Bot</router-link>
-            </li>
-            <li class="navbar__item">
-              <router-link to="profile">Sentence</router-link>
-            </li>
-            <li class="navbar__item">
-              <router-link to="profile">Issues</router-link>
-            </li>
-            <li class="navbar__item">
-              <router-link to="profile" class="active">Update</router-link>
-            </li>
-            <li class="navbar__item">
-              <router-link to="profile">Translate</router-link>
-            </li>
-          </ul>
-        </div>
-
+        <nav-bar/>
         <filter-bot/>
-
       </div>
     </div>
     <home-footer/>
@@ -80,6 +57,7 @@ import TopBar from './TopBar'
 import HomeFooter from './HomeFooter'
 import CardBot from './CardBot'
 import FilterBot from './FilterBot'
+import NavBar from './NavBar'
 
 export default {
   name: 'BotUpdate',
@@ -88,6 +66,7 @@ export default {
     TopBar,
     HomeFooter,
     UpDownVote,
+    NavBar,
     FilterBot
   },
   data () {
