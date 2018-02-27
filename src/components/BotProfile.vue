@@ -1,6 +1,7 @@
 <template>
   <div class="main">
     <top-bar/>
+
     <div class="container">
       <div class="page-bot">
         <div class="page-bot__header">
@@ -14,12 +15,12 @@
 
           <div class="bot__content">
             <div class="bot__header">
-              <router-link to="update" class="bot__title">{{ bot_title }}</router-link>
+              <h1 class="bot__title">{{ bot_title }}</h1>
             </div>
 
             <div class="bot__info">
               <div class="bot__updated">
-                Updated 2 weeks ago by <router-link class="url-author" to="profile">{{ bot_author_name }}</router-link>
+                Updated 2 weeks ago by <router-link class="url-author" to="user-profile">{{ bot_author_name }}</router-link>
               </div>
 
               <div class="bot__url">
@@ -44,27 +45,28 @@
         </div>
 
         <nav-bar/>
-        <filter-bot/>
+        <router-view/>
+
       </div>
     </div>
-    <home-footer/>
+    <site-footer/>
   </div>
 </template>
 
 <script>
 import UpDownVote from './UpDownVote'
 import TopBar from './TopBar'
-import HomeFooter from './HomeFooter'
+import SiteFooter from './SiteFooter'
 import CardBot from './CardBot'
 import FilterBot from './FilterBot'
 import NavBar from './NavBar'
 
 export default {
-  name: 'BotUpdate',
+  name: 'BotProfile',
   components: {
     CardBot,
     TopBar,
-    HomeFooter,
+    SiteFooter,
     UpDownVote,
     NavBar,
     FilterBot

@@ -45,10 +45,6 @@
     color: $brand-color;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
-
-    &:hover {
-      color: $primary-color;
-    }
   }
 
   .bot__author {

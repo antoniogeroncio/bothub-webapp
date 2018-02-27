@@ -58,7 +58,7 @@
       </div>
     </section>
 
-    <home-footer/>
+    <site-footer/>
   </div>
 </template>
 
@@ -69,7 +69,7 @@ import BotCategory from './BotCategory.vue'
 import CardBot from './CardBot.vue'
 import CardAuthor from './CardAuthor.vue'
 import Cta from './Cta.vue'
-import HomeFooter from './HomeFooter.vue'
+import SiteFooter from './SiteFooter.vue'
 
 export default {
   name: 'HomePage',
@@ -80,7 +80,7 @@ export default {
     CardBot,
     CardAuthor,
     Cta,
-    HomeFooter
+    SiteFooter
   },
   data () {
     return {

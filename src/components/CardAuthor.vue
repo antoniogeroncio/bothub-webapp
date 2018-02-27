@@ -1,7 +1,9 @@
 <template>
   <div class="card-author">
     <div class="card-author__image">
-      <img src="../assets/images/man.png" alt="">
+      <router-link to="user-profile">
+        <img src="../assets/images/man.png" alt="">
+      </router-link>
     </div>
     <div class="card-author__info">
       <div class="author__name">{{ author_name }}</div>
@@ -13,7 +15,7 @@
         Joined {{ author_joined }} · last seen {{ author_last_seen }}
       </span>
       </div>
-      <router-link to="profile" class="author__url">{{ author_url }}</router-link>
+      <router-link to="user-profile" class="author__url">{{ author_url }}</router-link>
       <span class="author__bot-counts">{{ author_bot_counts }} bots</span>
     </div>
   </div>

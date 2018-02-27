@@ -52,7 +52,8 @@
     }
 
     &:hover,
-    &.active{
+    &.active,
+    &.router-link-active {
       color: $brand-color;
 
       &::before {
@@ -61,7 +62,6 @@
     }
   }
 }
-
 
 .menu {
   width: 100%;

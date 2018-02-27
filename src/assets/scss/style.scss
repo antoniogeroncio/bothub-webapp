@@ -3,10 +3,12 @@
 @import
   '_reset',
   '_colors',
+  '_grid',
   '_variables',
   '_typo',
   '_body',
-  '_containers'
+  '_containers',
+  '_general'
 ;
 
 // Config UI default styles
@@ -15,6 +17,7 @@
   'ui/_badges',
   'ui/_buttons',
   'ui/_forms',
+  'ui/_lists',
   'ui/_selects',
   'ui/_tags'
 ;

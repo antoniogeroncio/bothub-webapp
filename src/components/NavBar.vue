@@ -2,22 +2,22 @@
   <div class="menu">
     <ul class="navbar navbar-bot">
       <li class="navbar__item">
-        <router-link to="profile">Description</router-link>
+        <router-link to="description">Description</router-link>
       </li>
       <li class="navbar__item">
-        <router-link to="profile">Bot</router-link>
+        <router-link to="bot">Bot</router-link>
       </li>
       <li class="navbar__item">
-        <router-link to="profile">Sentence</router-link>
+        <router-link to="sentence">Sentence</router-link>
       </li>
       <li class="navbar__item">
-        <router-link to="profile">Issues</router-link>
+        <router-link to="issues">Issues</router-link>
       </li>
       <li class="navbar__item">
-        <router-link to="profile" class="active">Update</router-link>
+        <router-link to="update" >Update</router-link>
       </li>
       <li class="navbar__item">
-        <router-link to="profile">Translate</router-link>
+        <router-link to="translate">Translate</router-link>
       </li>
     </ul>
   </div>

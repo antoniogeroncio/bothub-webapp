@@ -21,16 +21,16 @@
                   Joined {{ author_joined }} · last seen {{ author_last_seen }}
                 </span>
               </div>
-              <router-link to="profile" class="author__url">{{ author_url }}</router-link>
+              <router-link to="user-profile" class="author__url">{{ author_url }}</router-link>
             </div>
           </div>
 
           <ul class="navbar">
             <li class="navbar__item">
-              <router-link to="profile" class="active">Bots {{ author_bot_counts }}</router-link>
+              <router-link to="user-profile" class="active">Bots {{ author_bot_counts }}</router-link>
             </li>
             <li class="navbar__item">
-              <router-link to="profile">Star {{ author_bot_stars }}</router-link>
+              <router-link to="user-profile">Star {{ author_bot_stars }}</router-link>
             </li>
           </ul>
 
@@ -42,7 +42,7 @@
       </div>
     </section>
 
-    <home-footer/>
+    <site-footer/>
   </div>
 </template>
 
@@ -50,15 +50,15 @@
 import TopBar from './TopBar.vue'
 import CardBot from './CardBot.vue'
 import CardAuthor from './CardAuthor.vue'
-import HomeFooter from './HomeFooter.vue'
+import SiteFooter from './SiteFooter.vue'
 
 export default {
-  name: 'Profile',
+  name: 'UserProfile',
   components: {
     TopBar,
     CardBot,
     CardAuthor,
-    HomeFooter
+    SiteFooter
   },
   data () {
     return {
