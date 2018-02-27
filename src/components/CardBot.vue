@@ -18,13 +18,13 @@
 
       <div class="card-bot__content">
         <div class="card-bot__header">
-          <router-link to="bot-profile" class="card-bot__title">{{ bot_title }}</router-link>
+          <router-link to="/description" class="card-bot__title">{{ bot_title }}</router-link>
           <!--<span class="card-bot__author">{{ bot_author }}</span>-->
         </div>
 
         <div class="card-bot__info">
           <div class="card-bot__updated">
-            Updated 2 weeks ago by <router-link class="url-author" to="user-profile">{{ bot_author_name }}</router-link>
+            Updated 2 weeks ago by <router-link class="url-author" to="/user-profile">{{ bot_author_name }}</router-link>
           </div>
           <ul class="card-bot__flags">
             <li class="flags-item"><img src="../assets/images/flags/EN.png" alt="Flag ES"></li>
@@ -53,7 +53,7 @@
       </div>
 
       <div class="bot-action">
-        <router-link to="bot-profile" class="btn btn-update">Update <i class="material-icons">refresh</i></router-link>
+        <router-link to="update" class="btn btn-update">Update <i class="material-icons">refresh</i></router-link>
       </div>
     </div>
 </template>

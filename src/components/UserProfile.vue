@@ -27,18 +27,16 @@
 
           <ul class="navbar">
             <li class="navbar__item">
-              <router-link to="user-profile" class="active">Bots {{ author_bot_counts }}</router-link>
+              <router-link to="my-bots">Bots {{ author_bot_counts }}</router-link>
             </li>
             <li class="navbar__item">
-              <router-link to="user-profile">Star {{ author_bot_stars }}</router-link>
+              <router-link to="stared-bots">Star {{ author_bot_stars }}</router-link>
             </li>
           </ul>
 
         </div>
 
-        <card-bot/>
-        <card-bot/>
-        <card-bot/>
+        <router-view/>
       </div>
     </section>
 
@@ -48,7 +46,6 @@
 
 <script>
 import TopBar from './TopBar.vue'
-import CardBot from './CardBot.vue'
 import CardAuthor from './CardAuthor.vue'
 import SiteFooter from './SiteFooter.vue'
 
@@ -56,7 +53,6 @@ export default {
   name: 'UserProfile',
   components: {
     TopBar,
-    CardBot,
     CardAuthor,
     SiteFooter
   },
@@ -67,8 +63,8 @@ export default {
       author_joined: '2 years ago',
       author_last_seen: '9 days ago',
       author_url: 'http://davidgasquez.buthub.api/',
-      author_bot_counts: '60',
-      author_bot_stars: '160'
+      author_bot_counts: '1',
+      author_bot_stars: '6'
     }
   }
 }

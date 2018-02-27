@@ -12,6 +12,10 @@ import Sentence from '@/components/bot_pages/Sentence'
 import Translate from '@/components/bot_pages/Translate'
 import Update from '@/components/bot_pages/Update'
 
+// User Pages
+import MyBots from '@/components/user_pages/MyBots'
+import StaredBots from '@/components/user_pages/StaredBots'
+
 Vue.use(Router)
 
 export default new Router({
@@ -25,16 +29,17 @@ export default new Router({
       path: '/bot-profile',
       name: 'BotProfile',
       component: BotProfile,
+      redirect: '/description',
       children: [
-        {
-          path: '/bot',
-          name: 'Bot',
-          component: Bot
-        },
         {
           path: '/description',
           name: 'Description',
           component: Description
+        },
+        {
+          path: '/bot',
+          name: 'Bot',
+          component: Bot
         },
         {
           path: '/issues',
@@ -61,7 +66,20 @@ export default new Router({
     {
       path: '/user-profile',
       name: 'UserProfile',
-      component: UserProfile
+      component: UserProfile,
+      redirect: '/my-bots',
+      children: [
+        {
+          path: '/my-bots',
+          name: 'MyBots',
+          component: MyBots
+        },
+        {
+          path: '/stared-bots',
+          name: 'StaredBots',
+          component: StaredBots
+        }
+      ]
     }
   ]
 })
