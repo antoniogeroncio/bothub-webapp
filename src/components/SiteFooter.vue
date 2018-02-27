@@ -72,7 +72,7 @@
 
 <script>
 export default {
-  name: 'HomeFooter'
+  name: 'Footer'
 }
 </script>
 
