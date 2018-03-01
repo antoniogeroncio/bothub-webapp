@@ -11,9 +11,20 @@
       <a href="#" class="btn btn-primary">Start your bot</a>
     </div>
 
-    <div class="topbar-avatar">
-      <img src="../assets/images/man.png" alt="Avatar">
+    <div class="topbar-user">
+      <b-dropdown position="is-bottom-left">
+        <div class="topbar-avatar" slot="trigger">
+            <img src="../assets/images/man.png" alt="Avatar">
+        </div>
+        <b-dropdown-item>New Bot</b-dropdown-item>
+        <b-dropdown-item>Your Profile</b-dropdown-item>
+        <b-dropdown-item>Settings</b-dropdown-item>
+        <b-dropdown-item>Documentation</b-dropdown-item>
+        <b-dropdown-item>Conversational API</b-dropdown-item>
+        <b-dropdown-item>Logout</b-dropdown-item>
+      </b-dropdown>
     </div>
+
   </div>
 </template>
 
@@ -57,14 +68,18 @@ export default {
     }
   }
 
+  .topbar-user {
+    position: absolute;
+    right: 30px;
+  }
+
   .topbar-avatar {
     width: 44px;
     height: 44px;
     overflow: hidden;
     border-radius: 100%;
-    position: absolute;
-    right: 30px;
     border: 2px solid #fff;
+    cursor: pointer;
 
     img {
       width: 100%;
