@@ -2,7 +2,7 @@
   <div class="bot-filter">
     <div class="bot-filter__item">
       <input type="checkbox" id="sentences">
-      <label for="sentences">Sentences</label>
+      <label for="sentences">All comments</label>
     </div>
     <div class="bot-filter__item">
       <input type="checkbox" id="problem">
@@ -12,17 +12,13 @@
       <input type="checkbox" id="improvements">
       <label for="improvements">Improvements</label>
     </div>
-    <div class="bot-filter__item">
-      <input type="checkbox" id="historic">
-      <label for="historic">Historic</label>
-    </div>
     <button class="btn btn-filter"><i class="material-icons">search</i></button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FilterBot'
+  name: 'FilterIssues'
 }
 </script>
 
@@ -33,9 +29,8 @@ export default {
     display: flex;
     padding: 30px;
     align-items: center;
-    margin: 0 auto 40px;
-    border-bottom: 1px solid #ccc;
-    width: 80%;
+    margin: 0 auto;
+    width: 90%;
     position: relative;
 
     @media (max-width: 768px) {
