@@ -14,7 +14,17 @@
   margin: 2px;
 
   &--danger {
-    background-color: #f4516c;
+    background-color: $red;
+    color: #ffffff;
+  }
+
+  &--warning {
+    background-color: $orange;
+    color: #ffffff;
+  }
+
+  &--success {
+    background-color: $apple-green;
     color: #ffffff;
   }
 }
