@@ -10,11 +10,10 @@
 }
 
 .list-item {
-  background-color: $grey;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
+  display: block;
+  flex-direction: column;
+  padding: 0;
   border-radius: 5px;
   margin: 15px 0;
 
@@ -22,8 +21,15 @@
     margin-bottom: 0;
   }
 
+  &:hover,
+  &--active {
+    .list-item-content {
+      background-color: #fff;
+      box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+
   .material-icons {
-    color: $dark-grey;
     transition: all 0.2s ease-in-out;
   }
 
@@ -32,13 +38,49 @@
       color: $apple-green;
     }
   }
-  &:hover {
-    .material-icons {
-      color: #000;
-    }
+}
+
+.list-item-content {
+  background-color: #F6F6F6;
+  display: flex;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+  position: relative;
+
+  .material-icons {
+    position: absolute;
+    right: 20px;
+    color: #C3C3C3;
+    transition: all 0.2s ease-in-out;
   }
 }
 
 .list-item__action {
+  &:hover {
+    .material-icons {
+      color: $primary-color;
+    }
+  }
+}
 
+.list-item-tags {
+  background-color: #E3E3E3;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  padding: 10px 20px;
+}
+
+.badge {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  a {
+    display: inherit;
+  }
+  .material-icons {
+    font-size: 14px;
+    margin-left: 5px;
+    color: #ffffff;
+  }
 }
