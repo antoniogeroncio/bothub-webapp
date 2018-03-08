@@ -62,6 +62,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/scss/_colors";
+
 .list-item {
   position: relative;
   display: block;
@@ -83,16 +85,26 @@ export default {
   padding: 10px 20px;
   transition: all 0.2s ease-in-out;
   border-radius: 5px;
+  position: relative;
 
   .material-icons {
     position: absolute;
     right: 20px;
     color: #C3C3C3;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.list-item__action {
+  &:hover {
+    .material-icons {
+      color: $primary-color;
+    }
   }
 }
 
 .list-item-tags {
-  background: #ccc;
+  background-color: #E3E3E3;
   width: 100%;
   border-radius: 0 0 5px 5px;
   padding: 10px 20px;
