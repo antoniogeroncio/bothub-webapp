@@ -1,0 +1,84 @@
+$pie-size: 100px;
+$pie-border: 7px;
+
+.pie {
+  width: $pie-size;
+  height: $pie-size;
+  border-radius: 50%;
+  background-color: #CEEDE9;
+  background-image: linear-gradient(to right, transparent 50%, $primary-color 0);
+  position: relative;
+  margin: 10px;
+
+  .pie-percent {
+    width: $pie-size - $pie-border * 2;
+    height: $pie-size - $pie-border * 2;
+    background-color: #fff;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: $pie-border;
+    left: $pie-border;
+    border-radius: 100%;
+  }
+}
+
+.pie::before {
+  content: '';
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  transform-origin: left;
+}
+
+.pie[data-percent='5']::before {
+  transform: rotate(.05turn);
+}
+
+.pie[data-percent='10']::before {
+  transform: rotate(.10turn);
+}
+
+.pie[data-percent='15']::before {
+  transform: rotate(.15turn);
+}
+
+.pie[data-percent='20']::before {
+  transform: rotate(.20turn);
+}
+
+.pie[data-percent='25']::before {
+  transform: rotate(.25turn);
+}
+
+.pie[data-percent='30']::before {
+  transform: rotate(.30turn);
+}
+
+.pie[data-percent='50']::before {
+  transform: rotate(.50turn);
+}
+
+.pie[data-percent='60']::before {
+  transform: rotate(.60turn);
+  background: $primary-color;
+
+  transform-origin: left;
+  transform: rotate(.1turn);
+}
+
+// @keyframes spin {
+//   to { transform: rotate(1turn); }
+// }
+// @keyframes bg {
+//   100% { background: $primary-color; }
+// }
+// .pie::before {
+//   transform-origin: left;
+//   animation: spin 3s linear infinite, bg 6s step-end infinite;
+// }
+
