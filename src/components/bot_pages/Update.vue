@@ -30,6 +30,12 @@
             <div class="list-item-content">
               local <a class="list-item__action" href="#"><i class="material-icons">refresh</i></a>
             </div>
+            <div class="list-item-tags">
+              <span class="badge badge--danger">Dengue <a href="#"><i class="material-icons">cancel</i></a></span>
+              <span class="badge badge--warning">Chikungunya <a href="#"><i class="material-icons">cancel</i></a></span>
+              <span class="badge badge--success">Zika virus <a href="#"><i class="material-icons">cancel</i></a></span>
+              <span class="badge badge--success">Yellow fever <a href="#"><i class="material-icons">cancel</i></a></span>
+            </div>
           </li>
         </ul>
       </div>
