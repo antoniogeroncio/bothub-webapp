@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <div class="content">
+      <div class="language-add">
+        <a href="#" class="btn btn-secondary">New language</a>
+      </div>
       <div class="translate-list">
         <chart-box/>
         <chart-box/>
@@ -26,5 +29,22 @@ export default {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+  }
+
+  //---------------------
+  // New Language
+  //---------------------
+
+  .language-add {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    border-bottom: 1px solid #D8D8D8;
+    margin-bottom: 30px;
+
+    .btn {
+
+    }
   }
 </style>

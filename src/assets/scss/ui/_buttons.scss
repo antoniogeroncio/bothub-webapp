@@ -72,6 +72,20 @@ button {
     }
   }
 
+  &-secondary {
+    border: 1px solid $dark-green;
+    text-transform: none;
+    font-size: 14px;
+    background-color: $dark-green;
+    color: #ffffff;
+
+    &:hover {
+      background-color: $dark-green2;
+      color: #ffffff;
+      border: 1px solid $dark-green2;
+    }
+  }
+
   &-update {
     color: $apple-green;
     background-color: transparent;
