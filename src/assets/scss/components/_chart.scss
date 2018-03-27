@@ -8,7 +8,6 @@ $pie-border: 7px;
   background-color: #CEEDE9;
   background-image: linear-gradient(to right, transparent 50%, $primary-color 0);
   position: relative;
-  margin: 10px;
 
   .pie-percent {
     width: $pie-size - $pie-border * 2;
