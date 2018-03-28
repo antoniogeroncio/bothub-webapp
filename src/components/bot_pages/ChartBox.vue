@@ -1,11 +1,13 @@
 <template>
   <div class="translate-box">
     <div class="translate-box__content">
+      <router-link to="/translation">
       <h5 class="translate-box__title">
         English
         <span class="translate-box__flag"><img src="../../assets/images/flags/EN.png" alt=""></span>
       </h5>
       <span class="translate-box__status">300 sentences to translate</span>
+      </router-link>
     </div>
 
     <div class="translate-box__chart">

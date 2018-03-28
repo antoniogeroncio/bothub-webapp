@@ -2,7 +2,20 @@
   <div class="container">
     <div class="content">
       <div class="translation-item">
-        <h2 class="translation-item__title">Intent</h2>
+        <h2 class="translation-item__title">Intent 1</h2>
+
+        <div class="translation-item__content">
+          <div class="original-text">
+            Your phrase
+          </div>
+
+          <div class="translation-text">
+            <input type="text" placeholder="Votre phrase">
+          </div>
+        </div>
+      </div>
+      <div class="translation-item">
+        <h2 class="translation-item__title">Intent 1</h2>
 
         <div class="translation-item__content">
           <div class="original-text">
@@ -36,30 +49,40 @@ export default {
 }
 
 .translation-item__title {
-
+  padding: 0 20px;
+  font-size: 14px;
+  margin: 30px 0 0;
 }
 
 .translation-item__content {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  align-items: stretch;
 }
 
 .original-text,
 .translation-text {
   border-radius: 5px;
   background-color: #F6F6F6;
-  margin: 15px;
+  margin: 0 15px 10px 15px;
   width: calc(50% - 30px);
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .original-text {
   display: flex;
   align-items: center;
   padding: 10px 20px;
+  height: 54px;
 }
 
 .translation-text {
   input {
+    height: 54px;
     border: none;
     margin: 0;
     padding: 10px 20px;
