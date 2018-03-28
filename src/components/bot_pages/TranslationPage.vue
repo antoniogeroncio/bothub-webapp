@@ -128,6 +128,10 @@ $pie-border: 7px;
       background-color: $dark-green2;
       border-color: $dark-green2;
     }
+
+    .material-icons {
+      margin-left: 20px;
+    }
   }
 
   .is-active {
