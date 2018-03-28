@@ -3,17 +3,18 @@
 
     <div class="translation-filter">
 
-      <div class="filter-item filter-item--primary">
-        <b-field>
-          <b-select placeholder="Filter Intent">
-            <option
-              v-for="option in data"
-              :value="option.id"
-              :key="option.id">
-              {{ option.user.first_name }}
-            </option>
-          </b-select>
-        </b-field>
+      <div class="filter-item intent-filter">
+
+        <b-dropdown>
+          <button class="btn btn-secondary" slot="trigger">
+            <span>Filter Intent</span>
+            <i class="material-icons">arrow_drop_down</i>
+          </button>
+
+          <b-dropdown-item>Action</b-dropdown-item>
+          <b-dropdown-item>Another action</b-dropdown-item>
+          <b-dropdown-item>Something else</b-dropdown-item>
+        </b-dropdown>
       </div>
 
       <div class="filter-item">
@@ -86,7 +87,7 @@
 const data = require('./data_test.json')
 export default {
   name: 'TranslationPage',
-  data() {
+  data () {
     return { data }
   }
 }
@@ -112,13 +113,34 @@ $pie-border: 7px;
 
 .filter-item {
   margin: 0 20px;
+}
 
-  &--primary {
-    position: absolute;
-    left: 0;
+.intent-filter {
+  position: absolute;
+  left: 0;
+
+  .btn {
+    padding: 5px 10px 5px 20px;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: $dark-green2;
+      border-color: $dark-green2;
+    }
+  }
+
+  .is-active {
+    .btn {
+      background-color: $dark-green2;
+      border-color: $dark-green2;
+    }
   }
 }
 
+//----------------
+// Chart
+//----------------
 .trasnlation-chart {
   padding: 0 20px;
   .pie {
@@ -130,7 +152,7 @@ $pie-border: 7px;
       top: $pie-border;
       left: $pie-border;
       background-color: #CEEDE9;
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 500;
       color: $dark-green2;
     }
