@@ -67,7 +67,23 @@ $pie-border: 7px;
   background: $primary-color;
 
   transform-origin: left;
-  transform: rotate(.1turn);
+  transform: rotate(.10turn);
+}
+
+.pie[data-percent='70']::before {
+  transform: rotate(.70turn);
+  background: $primary-color;
+
+  transform-origin: left;
+  transform: rotate(.20turn);
+}
+
+.pie[data-percent='75']::before {
+  transform: rotate(.75turn);
+  background: $primary-color;
+
+  transform-origin: left;
+  transform: rotate(.25turn);
 }
 
 // @keyframes spin {

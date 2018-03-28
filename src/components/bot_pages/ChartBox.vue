@@ -63,7 +63,6 @@ export default {
   $pie-border: 5px;
 
   .translate-box__chart {
-
     .pie {
       width: $pie-size;
       height: $pie-size;
