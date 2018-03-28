@@ -10,6 +10,7 @@ import Description from '@/components/bot_pages/Description'
 import Issues from '@/components/bot_pages/Issues'
 import Sentence from '@/components/bot_pages/Sentence'
 import Translate from '@/components/bot_pages/Translate'
+import TranslationPage from '@/components/bot_pages/TranslationPage'
 import Update from '@/components/bot_pages/Update'
 
 // User Pages
@@ -55,6 +56,11 @@ export default new Router({
           path: '/translate',
           name: 'Translate',
           component: Translate
+        },
+        {
+          path: '/translation',
+          name: 'TranslationPage',
+          component: TranslationPage
         },
         {
           path: '/update',
