@@ -46,9 +46,9 @@
 
         <nav-bar/>
         <router-view/>
-
       </div>
     </div>
+    <bot-simulation/>
     <site-footer/>
   </div>
 </template>
@@ -60,6 +60,7 @@ import SiteFooter from './SiteFooter'
 import CardBot from './CardBot'
 import FilterBot from './FilterBot'
 import NavBar from './NavBar'
+import BotSimulation from './bot_pages/BotSimulation'
 
 export default {
   name: 'BotProfile',
@@ -69,7 +70,8 @@ export default {
     SiteFooter,
     UpDownVote,
     NavBar,
-    FilterBot
+    FilterBot,
+    BotSimulation
   },
   data () {
     return {

@@ -42,9 +42,5 @@ export default {
     padding: 20px;
     border-bottom: 1px solid #D8D8D8;
     margin-bottom: 30px;
-
-    .btn {
-
-    }
   }
 </style>
