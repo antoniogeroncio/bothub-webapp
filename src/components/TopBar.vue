@@ -8,29 +8,50 @@
     </div>
 
     <div class="topbar-action-buttom">
-      <a href="#" class="btn btn-primary">Start your bot</a>
+      <button class="btn btn-primary" @click="createBot = true">Start your bot</button>
     </div>
+
+    <b-modal :active.sync="createBot">
+      <div class="modal-body">
+        <h4>Create your Bot</h4>
+
+      </div>
+    </b-modal>
 
     <div class="topbar-user">
       <b-dropdown position="is-bottom-left">
         <div class="topbar-avatar" slot="trigger">
             <img src="../assets/images/man.png" alt="Avatar">
         </div>
-        <b-dropdown-item>New Bot</b-dropdown-item>
+        <b-dropdown-item @click="createBot = true">New Bot</b-dropdown-item>
         <b-dropdown-item>Your Profile</b-dropdown-item>
         <b-dropdown-item>Settings</b-dropdown-item>
         <b-dropdown-item>Documentation</b-dropdown-item>
         <b-dropdown-item>Conversational API</b-dropdown-item>
-        <b-dropdown-item>Logout</b-dropdown-item>
+        <b-dropdown-item @click="userLogin = true">Login</b-dropdown-item>
       </b-dropdown>
     </div>
+
+    <b-modal :active.sync="userLogin">
+      <div class="modal-body">
+        <h4>Login</h4>
+
+      </div>
+    </b-modal>
 
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'TopBar'
+  name: 'TopBar',
+  data () {
+    return {
+      createBot: false,
+      userLogin: false
+    }
+  }
 }
 </script>
 
