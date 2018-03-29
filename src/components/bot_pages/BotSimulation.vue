@@ -65,7 +65,7 @@ export default {
     right: 30px;
     background-color: #F8F8F8;
     border-radius: 10px 10px 0 0;
-    width: 350px;
+    width: 300px;
     z-index: 900;
     box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
   }
