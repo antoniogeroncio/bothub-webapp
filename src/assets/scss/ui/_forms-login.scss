@@ -1,0 +1,24 @@
+.login {
+  input {
+    background-color: #BCF1C5;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    height: 36px;
+    color: #000;
+    font-size: 14px;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $primary-color;
+    }
+  }
+  label {
+    font-size: 13px;
+    font-weight: 400;
+    color: $dark-green2;
+  }
+  // Custom icon for input type Password
+  .has-text-primary {
+    color: rgb(135, 187, 136) !important;
+  }
+}

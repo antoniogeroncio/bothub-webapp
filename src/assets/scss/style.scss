@@ -1,5 +1,10 @@
+@import './font-awesome/fontawesome';
+@import './font-awesome/fa-solid';
+@import './font-awesome/fa-brands';
 
+//---------------------
 // Default styles for general config.
+//---------------------
 @import
   '_reset',
   '_colors',
@@ -11,18 +16,23 @@
   '_general'
 ;
 
+//---------------------
 // Config UI default styles
+//---------------------
 @import
   'ui/_alerts',
   'ui/_badges',
   'ui/_buttons',
   'ui/_forms',
+  'ui/_forms-login',
   'ui/_lists',
   'ui/_selects',
   'ui/_tags'
 ;
 
+//---------------------
 // Add styles for components
+//---------------------
 @import
   'components/_chart',
   'components/_cta',
@@ -38,3 +48,16 @@
   'components/_social-nav',
   'components/_submenu'
 ;
+
+//---------------------
+// Custom Buefy
+//---------------------
+.modal-close:before {
+  height: 2px;
+  width: 20px;
+}
+
+.modal-close:after {
+  height: 20px;
+  width: 2px;
+}

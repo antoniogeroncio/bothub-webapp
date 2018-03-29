@@ -34,8 +34,7 @@
 
     <b-modal :active.sync="userLogin">
       <div class="modal-body">
-        <h4>Login</h4>
-
+        <modal-login/>
       </div>
     </b-modal>
 
@@ -43,9 +42,12 @@
 </template>
 
 <script>
-
+import ModalLogin from './login/ModalLogin'
 export default {
   name: 'TopBar',
+  components: {
+    ModalLogin
+  },
   data () {
     return {
       createBot: false,
