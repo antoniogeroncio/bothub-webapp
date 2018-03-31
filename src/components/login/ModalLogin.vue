@@ -20,7 +20,7 @@
         </b-field>
 
         <div class="login-links">
-          <router-link to="#">Forgot password?</router-link>
+          <a href="#">Forgot password?</a>
         </div>
 
         <div class="login-action">
@@ -29,8 +29,29 @@
       </b-tab-item>
 
       <b-tab-item label="Register">
-          Lorem
+
+        <b-field label="Email address">
+            <b-input placeholder="Your email address" type="email"></b-input>
+        </b-field>
+
+        <b-field label="Nickname">
+            <b-input placeholder="Your nickname" type="text"></b-input>
+        </b-field>
+
+        <b-field label="Password">
+            <b-input type="password"
+                icon-pack="fa"
+                placeholder="Define a password"
+                password-reveal>
+            </b-input>
+        </b-field>
+
+        <div class="login-action">
+          <button class="btn-secondary btn-login">Register</button>
+        </div>
+
       </b-tab-item>
+
     </b-tabs>
   </div>
 </template>
@@ -67,6 +88,7 @@ export default {
   justify-content: center;
 
   .btn-login {
+    margin-top: 20px;
     padding: 10px 30px;
   }
 }
@@ -75,9 +97,5 @@ export default {
   display: flex;
   justify-content: center;
   margin: 20px 0;
-}
-
-.tabs ul {
-  display: none;
 }
 </style>
