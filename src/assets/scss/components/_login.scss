@@ -1,13 +1,10 @@
-.login {
-
+.login-tabs {
   .tabs ul {
     border-bottom: 2px solid #fff;
-
     li {
       margin: 0 10px;
-
       a {
-            border-bottom: 3px solid #fff;
+        border-bottom: 3px solid #fff;
       }
       &.is-active {
         a {
@@ -18,3 +15,20 @@
     }
   }
 }
+
+.login-action {
+  display: flex;
+  justify-content: center;
+
+  .btn-login {
+    margin-top: 20px;
+    padding: 10px 30px;
+  }
+}
+
+.avatar-login {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
