@@ -1,5 +1,10 @@
 <template>
   <div class="login">
+
+    <div class="avatar-login">
+      <img src="../../assets/images/icon-avatar-login.svg" alt="" class="avatar-login-icon">
+    </div>
+
     <b-tabs v-model="activeTab" position="is-centered">
       <b-tab-item label="Login">
         <b-field label="Email address">
@@ -19,7 +24,7 @@
         </div>
 
         <div class="login-action">
-          <button class="btn-secondary">Login</button>
+          <button class="btn-secondary btn-login">Login</button>
         </div>
       </b-tab-item>
 
@@ -42,13 +47,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/colors';
 .login-links {
   font-size: 13px;
   margin-bottom: 10px;
   text-align: right;
+
+  a {
+    color: $dark-grey;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
 }
 
 .login-action {
+  display: flex;
+  justify-content: center;
 
+  .btn-login {
+    padding: 10px 30px;
+  }
+}
+
+.avatar-login {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 </style>
