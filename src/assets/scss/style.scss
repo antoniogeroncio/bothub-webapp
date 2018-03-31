@@ -39,6 +39,7 @@
   'components/_footer-nav',
   'components/_footer',
   'components/_header-page-bot',
+  'components/_login',
   'components/_modal-body',
   'components/_top-bar',
   'components/_modals',
@@ -52,12 +53,4 @@
 //---------------------
 // Custom Buefy
 //---------------------
-.modal-close:before {
-  height: 2px;
-  width: 20px;
-}
-
-.modal-close:after {
-  height: 20px;
-  width: 2px;
-}
+@import 'ui/_modal';

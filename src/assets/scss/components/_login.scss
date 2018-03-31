@@ -1,0 +1,20 @@
+.login {
+
+  .tabs ul {
+    border-bottom: 2px solid #fff;
+
+    li {
+      margin: 0 10px;
+
+      a {
+            border-bottom: 3px solid #fff;
+      }
+      &.is-active {
+        a {
+          border-bottom-color: $primary-color;
+          color: $dark-green2;
+        }
+      }
+    }
+  }
+}
