@@ -12,10 +12,7 @@
     </div>
 
     <b-modal :active.sync="createBot">
-      <div class="modal-body">
-        <h4>Create your Bot</h4>
-
-      </div>
+      <create-bot/>
     </b-modal>
 
     <div class="topbar-user">
@@ -34,6 +31,9 @@
 
     <b-modal :active.sync="userLogin">
       <div class="modal-body">
+        <div class="avatar-login">
+          <img src="../assets/images/icon-avatar-login.svg" alt="" class="avatar-login-icon">
+        </div>
         <modal-login/>
       </div>
     </b-modal>
@@ -43,10 +43,13 @@
 
 <script>
 import ModalLogin from './login/ModalLogin'
+import CreateBot from './bot_pages/CreateBot'
+
 export default {
   name: 'TopBar',
   components: {
-    ModalLogin
+    ModalLogin,
+    CreateBot
   },
   data () {
     return {
