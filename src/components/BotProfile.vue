@@ -38,9 +38,9 @@
           </div>
 
           <div class="bot__action">
-            <router-link to="#" class="btn btn-default btn-action"><i class="material-icons">content_copy</i></router-link>
-            <router-link to="#" class="btn btn-default btn-action"><i class="material-icons">error_outline</i></router-link>
-            <router-link to="update" class="btn btn-default btn-action"><i class="material-icons">refresh</i></router-link>
+            <button class="btn btn-default btn-action"><i class="material-icons">content_copy</i></button>
+            <button class="btn btn-default btn-action"><i class="material-icons">error_outline</i></button>
+            <button class="btn btn-default btn-action"><i class="material-icons">refresh</i></button>
           </div>
         </div>
 
