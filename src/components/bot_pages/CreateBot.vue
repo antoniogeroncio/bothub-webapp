@@ -5,7 +5,12 @@
     </b-field>
 
     <b-field label="Segment">
-      <b-input placeholder="Enter segments followed by commas" type="text"></b-input>
+      <b-taginput
+          v-model="tags"
+          placeholder="Enter segments followed by commas"
+          class="input-tags"
+          size="is-small">
+      </b-taginput>
     </b-field>
 
     <span class="label">Choose the type of privacy</span>
@@ -21,12 +26,7 @@
     </div>
 
     <b-field label="Original language (required)">
-      <b-taginput
-          v-model="tags"
-          placeholder="Choose a source language"
-          class="input-tags"
-          size="is-small">
-      </b-taginput>
+      <b-input placeholder="Choose a source language" type="text"></b-input>
     </b-field>
     <span class="form-help">Our bot is multilingual, you can add more language later on</span>
 
