@@ -1,7 +1,7 @@
 <template>
   <div class="login-tabs">
 
-    <div class="avatar-login">
+    <div class="avatar-modal">
       <img src="../../assets/images/icon-avatar-login.svg" alt="" class="avatar-login-icon">
     </div>
 

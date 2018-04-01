@@ -12,7 +12,7 @@
       box-shadow: 0 0 0 2px $primary-color;
     }
   }
-  label {
+  label, .label {
     font-size: 13px;
     font-weight: 400;
     color: $dark-green2;
@@ -20,5 +20,29 @@
   // Custom icon for input type Password
   .has-text-primary {
     color: rgb(135, 187, 136) !important;
+  }
+  .form-help {
+    font-size: 11px;
+    font-style: italic;
+    position: relative;
+    top: -10px;
+    color: $dark-green2;
+  }
+}
+
+.taginput .is-small.taginput-container.is-focusable {
+  background-color: #c0f1c1;
+  border-color: #c0f1c1;
+  padding: 5px 5px 2px 5px;
+  border-radius: 5px;
+  box-shadow: none;
+  input {
+    padding: 5px;
+  }
+  .tag:not(body) {
+    background-color: #87da89;
+    color: #16330f;
+    font-weight: 500;
+    padding: 5px 10px;
   }
 }

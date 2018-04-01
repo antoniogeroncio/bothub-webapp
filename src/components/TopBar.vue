@@ -12,7 +12,12 @@
     </div>
 
     <b-modal :active.sync="createBot">
-      <create-bot/>
+      <div class="modal-body">
+        <div class="avatar-modal">
+          <img src="../assets/images/avatar.png" alt="" class="avatar-login-icon">
+        </div>
+        <create-bot/>
+      </div>
     </b-modal>
 
     <div class="topbar-user">
@@ -32,7 +37,7 @@
     <b-modal :active.sync="userLogin">
       <div class="modal-body">
         <div class="avatar-login">
-          <img src="../assets/images/icon-avatar-login.svg" alt="" class="avatar-login-icon">
+          <img src="/assets/images/icon-avatar-login.svg" alt="" class="avatar-login-icon">
         </div>
         <modal-login/>
       </div>
