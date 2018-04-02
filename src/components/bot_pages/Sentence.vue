@@ -4,14 +4,32 @@
     <div class="col col-100">
       <h2 class="title-list">Know_symptoms</h2>
       <ul class="lists">
-        <li class="list-item list-item--active">
+        <li class="list-item">
           <div class="list-item-content">
             What are the symptoms of zika virus? <a class="list-item__action" href="#"><i class="material-icons">cancel</i></a>
           </div>
           <div class="list-item-tags">
-            <span class="badge badge--danger">Diseases <a href="#"><i class="material-icons">cancel</i></a></span>
-            <span class="badge badge--warning">Diseases <a href="#"><i class="material-icons">cancel</i></a></span>
-            <span class="badge badge--success">Diseases <a href="#"><i class="material-icons">cancel</i></a></span>
+            <b-tag v-if="isTag1Active"
+                type="is-primary"
+                closable
+                rounded
+                @close="isTag1Active = false">
+                Diseases
+            </b-tag>
+            <b-tag v-if="isTag2Active"
+                type="is-danger"
+                rounded
+                closable
+                @close="isTag2Active = false">
+                Dengue
+            </b-tag>
+            <b-tag v-if="isTag3Active"
+                type="is-success"
+                rounded
+                closable
+                @close="isTag3Active = false">
+                Zika Virus
+            </b-tag>
           </div>
         </li>
         <li class="list-item">
@@ -57,7 +75,14 @@
 
 <script>
 export default {
-  name: 'Sentence'
+  name: 'Sentence',
+  data() {
+    return {
+      isTag1Active: true,
+      isTag2Active: true,
+      isTag3Active: true
+    }
+  }
 }
 </script>
 

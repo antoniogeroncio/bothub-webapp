@@ -4,7 +4,7 @@
       <div class="list-items">
 
         <div class="filter-bot__text">
-          <input type="text" value="What are the symptoms of zika virus?" placeholder="text" class="ant-input">
+          <input type="text" value="What are the symptoms of zika virus?" placeholder="Add your text" class="ant-input">
           <div class="hightlight-text">
             <span>What are the symptoms of</span>
             <span class="entity-select"> zika virus </span>
@@ -13,7 +13,27 @@
         </div>
 
         <div class="list-item-tags">
-          <span class="badge badge--warning">Diseases <a href="#"><i class="material-icons">cancel</i></a></span>
+            <b-tag v-if="isTag1Active"
+                type="is-primary"
+                closable
+                rounded
+                @close="isTag1Active = false">
+                Diseases
+            </b-tag>
+            <b-tag v-if="isTag2Active"
+                type="is-danger"
+                rounded
+                closable
+                @close="isTag2Active = false">
+                Dengue
+            </b-tag>
+            <b-tag v-if="isTag3Active"
+                type="is-success"
+                rounded
+                closable
+                @close="isTag3Active = false">
+                Zika Virus
+            </b-tag>
         </div>
       </div>
     </div>
@@ -48,7 +68,14 @@
 
 <script>
 export default {
-  name: 'BotFilter'
+  name: 'BotFilter',
+  data() {
+    return {
+      isTag1Active: true,
+      isTag2Active: true,
+      isTag3Active: true
+    }
+  }
 }
 </script>
 
