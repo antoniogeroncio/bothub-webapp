@@ -21,7 +21,7 @@ $gap: 15px;
   }
 
   &-50 {
-    width: calc(50% - 15px);
+    width: calc(50% - 30px);
 
     @media (max-width: 768px) {
       margin: $gap 0;

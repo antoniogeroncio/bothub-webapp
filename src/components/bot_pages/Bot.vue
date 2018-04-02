@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <div class="content">
+
+      <bot-filter/>
+
       <div class="col col-50">
         <h2 class="title-list">Intent</h2>
         <ul class="lists intent__list">
@@ -41,8 +44,12 @@
 </template>
 
 <script>
+import BotFilter from './BotFilter'
 export default {
-  name: 'Bot'
+  name: 'Bot',
+  components: {
+    BotFilter
+  }
 }
 </script>
 
