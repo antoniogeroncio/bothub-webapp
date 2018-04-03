@@ -105,6 +105,11 @@ export default {
       color: #60605B;
       height: 100px;
       font-family: "Encode Sans", sans-serif;
+      transition: all 0.2s ease-in-out;
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba($primary-color, .3);
+      }
 
       &::-webkit-input-placeholder {
         color: darken(#F6F6F6, 30%);
