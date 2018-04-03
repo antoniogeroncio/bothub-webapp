@@ -69,7 +69,7 @@
 <script>
 export default {
   name: 'BotFilter',
-  data() {
+  data () {
     return {
       isTag1Active: true,
       isTag2Active: true,

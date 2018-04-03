@@ -76,7 +76,7 @@
 <script>
 export default {
   name: 'Sentence',
-  data() {
+  data () {
     return {
       isTag1Active: true,
       isTag2Active: true,

@@ -68,7 +68,7 @@ export default {
   components: {
     FilterBot
   },
-  data() {
+  data () {
     return {
       isTag1Active: true,
       isTag2Active: true,
