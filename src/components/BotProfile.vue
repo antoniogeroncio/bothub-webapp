@@ -30,7 +30,7 @@
               <ul class="bot__summary">
                 <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">6547 issues </span><i class="material-icons">error_outline</i></a></li>
                 <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">547 copy </span><i class="material-icons">content_copy</i></a></li>
-                <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">321 stars </span><i class="material-icons">grade</i></a></li>
+                <li class="bot-summary__item"><button class="btn btn-summary" @click="favorites"><span class="bot-summary__item-label">321 stars </span><i class="material-icons">grade</i></button></li>
                 <li class="bot-summary__item icon-update"><a href="#"><i class="material-icons">refresh</i></a></li>
               </ul>
             </div>
@@ -38,9 +38,9 @@
           </div>
 
           <div class="bot__action">
-            <button class="btn btn-default btn-action"><i class="material-icons">content_copy</i></button>
+            <button class="btn btn-default btn-action" @click="fork"><i class="material-icons">content_copy</i></button>
             <button class="btn btn-default btn-action"><i class="material-icons">error_outline</i></button>
-            <button class="btn btn-default btn-action"><i class="material-icons">refresh</i></button>
+            <button class="btn btn-default btn-action" @click="update"><i class="material-icons">refresh</i></button>
           </div>
         </div>
 
@@ -79,6 +79,29 @@ export default {
       bot_author: 'david_gazques',
       bot_author_name: 'David Gazques',
       bot_url: 'http://buthub.io/matthew-russell/bot_pizza_delivey/'
+    }
+  },
+  methods: {
+    fork () {
+      this.$snackbar.open({
+        duration: 5000,
+        position: 'is-top',
+        message: 'Bot_Pizza_Delivey You duplicated this robot, Make it better.'
+      })
+    },
+    update () {
+      this.$snackbar.open({
+        duration: 5000,
+        position: 'is-top',
+        message: 'Your bot Bot_Pizza_Delivey has been updated successfully.'
+      })
+    },
+    favorites () {
+      this.$snackbar.open({
+        duration: 5000,
+        position: 'is-top',
+        message: 'Bot_Pizza_Delivey is among your favorites now.'
+      })
     }
   }
 }

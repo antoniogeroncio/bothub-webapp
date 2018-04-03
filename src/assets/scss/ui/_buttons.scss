@@ -16,7 +16,9 @@ button {
   font-size: 12px;
   font-weight: 600;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     background-color: $dark-grey;
     color: #FFF;
   }
@@ -37,7 +39,9 @@ button {
   font-size: 12px;
   font-weight: 600;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     background-color: $dark-grey;
     color: #FFF;
   }
@@ -53,7 +57,9 @@ button {
 
     transition: all 0.2s ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       background-color: $dark-green2;
     }
   }
@@ -65,7 +71,9 @@ button {
     background-color: $light-green;
     color: $dark-green2;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       background-color: $dark-green2;
       color: #ffffff;
       border: 1px solid $dark-green2;
@@ -79,7 +87,9 @@ button {
     background-color: $dark-green;
     color: #ffffff;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       background-color: $dark-green2;
       color: #ffffff;
       border: 1px solid $dark-green2;
@@ -91,7 +101,9 @@ button {
     background-color: transparent;
     border-color: $apple-green;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       background-color: $apple-green;
       color: $dark-green2;
     }
@@ -101,8 +113,11 @@ button {
     color: $primary-color;
     background-color: #fff;
     box-shadow: 0 2px 4px 0 rgba($primary-color, 0.3);
+    outline: none;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       background-color: $primary-color;
       color: #fff;
       box-shadow: none;
@@ -121,9 +136,29 @@ button {
       color: $dark-green2;
     }
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       background-color: transparent;
       color: $dark-green2;
+    }
+  }
+
+  &-summary {
+    padding: 0;
+    background-color: transparent;
+    text-transform: initial;
+    font-weight: normal;
+    border: 0;
+    font-size: 14px;
+    font-family: $font-primary;
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary-color;
+      background-color: transparent;
     }
   }
 }
