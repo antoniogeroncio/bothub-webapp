@@ -52,7 +52,7 @@
     <div class="col col-100">
       <h2 class="title-list">Intent</h2>
 
-      <intent-item/>
+      <intent-content/>
 
     </div>
   </div>
@@ -60,13 +60,12 @@
 </template>
 
 <script>
-import IntentItem from './IntentItem'
-// import ViewMore from './ViewMore'
+import IntentContent from './IntentContent'
 
 export default {
   name: 'Sentence',
   components: {
-    IntentItem
+    IntentContent
   },
   data () {
     return {
