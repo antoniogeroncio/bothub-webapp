@@ -52,13 +52,7 @@
     <div class="col col-100">
       <h2 class="title-list">Intent</h2>
 
-      <ul class="lists">
-        <intent-item/>
-        <intent-item/>
-        <intent-item/>
-      </ul>
-
-      <ViewMore/>
+      <intent-item/>
 
     </div>
   </div>
@@ -67,11 +61,13 @@
 
 <script>
 import IntentItem from './IntentItem'
-import ViewMore from './ViewMore'
+// import ViewMore from './ViewMore'
 
 export default {
   name: 'Sentence',
-  components: {ViewMore, IntentItem},
+  components: {
+    IntentItem
+  },
   data () {
     return {
       isTag1Active: true,
