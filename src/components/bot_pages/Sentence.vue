@@ -51,31 +51,27 @@
     </div>
     <div class="col col-100">
       <h2 class="title-list">Intent</h2>
+
       <ul class="lists">
-        <li class="list-item">
-          <div class="list-item-content">
-            Your phrase <a class="list-item__action" href="#"><i class="material-icons">cancel</i></a>
-          </div>
-        </li>
-        <li class="list-item">
-          <div class="list-item-content">
-            Your phrase <a class="list-item__action" href="#"><i class="material-icons">cancel</i></a>
-          </div>
-        </li>
-        <li class="list-item">
-          <div class="list-item-content">
-            Your phrase <a class="list-item__action" href="#"><i class="material-icons">cancel</i></a>
-          </div>
-        </li>
+        <intent-item/>
+        <intent-item/>
+        <intent-item/>
       </ul>
+
+      <ViewMore/>
+
     </div>
   </div>
 </div>
 </template>
 
 <script>
+import IntentItem from './IntentItem'
+import ViewMore from './ViewMore'
+
 export default {
   name: 'Sentence',
+  components: {ViewMore, IntentItem},
   data () {
     return {
       isTag1Active: true,
@@ -85,7 +81,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
