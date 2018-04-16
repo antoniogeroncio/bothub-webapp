@@ -1,60 +1,57 @@
 <template>
-    <div class="stars">
-      <span>{{count}} Stars</span>
-      <img v-on:click="set_image()" :src="star" alt="">
-    </div>
+  <li class="bot-summary__item">
+    <span>
+      <span class="bot-summary__item-label"><slot/> stars</span>
+      <i class="material-icons">grade</i>
+    </span>
+  </li>
 </template>
 
 <script>
-    export default {
-        props: {
-            count: {
-                type: Number,
-                required: true
-            },
-            status: {
-                type: Boolean,
-                required: true
-            },
-            star: {
-                default: '/static/images/components/bot_informations/star.png'
-            }
-        },
-        methods: {
-            set_image(){
-                // call function that change status
-                this.status = !this.status
-                if(this.status){
-                    this.star = '/static/images/components/bot_informations/star_active.png'
-                }else{
-                    this.star = '/static/images/components/bot_informations/star.png'
-                }
-            }
-        }
+export default {
+  props: {
+    count: {
+      type: Number,
+      required: true
+    },
+    status: {
+      type: Boolean,
+      required: true
     }
+  }
+}
 </script>
 
-<style lang="less">
-    .stars {
-        font-size: 15px;
-        height: 15px;
-        span {
-            line-height: 15px;
-            opacity: 0.39;
-            font-size: 12px;
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #000000;
-        }
-        img {
-            width: 15px;
-            height: 15px;
-            vertical-align: middle;
-        }
+<style lang="scss">
+@import "../../assets/scss/_colors";
+  .bot-summary__item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 30px;
+
+    .material-icons {
+      margin-left: 10px;
+      font-size: 16px;
     }
+
+    a {
+      display: flex;
+      align-items: center;
+      color: $dark-grey;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    @media (max-width: 992px) {
+      margin-left: 10px;
+      .material-icons {
+        margin-left: 4px;
+      }
+    }
+  }
 </style>
-
-

@@ -4,7 +4,7 @@
       <ul class="bot-card__summary">
         <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">{{ summary.issues }} issues </span><i class="material-icons">error_outline</i></a></li>
         <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">{{ summary.copy }} copy </span><i class="material-icons">content_copy</i></a></li>
-        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">{{ summary.stars }} stars </span><i class="material-icons">grade</i></a></li>
+        <stars>300</stars>
         <li class="bot-summary__item icon-update"><a href="#"><i class="material-icons">refresh</i></a></li>
       </ul>
 
@@ -61,12 +61,14 @@
 import UpDownVote from './UpDownVote.vue'
 import Badge from './shared/Badge'
 import Flags from './shared/Flags'
+import Stars from './bot_informations/Stars'
 
 export default {
   name: 'CardBot',
   components: {
     Flags,
     Badge,
+    Stars,
     UpDownVote
   },
   data () {
