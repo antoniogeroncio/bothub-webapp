@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from '@/components/HomePage'
+import StyleGuide from '@/components/StyleGuide'
 import UserProfile from '@/components/UserProfile'
 
 // Bot Informations
@@ -25,6 +26,11 @@ export default new Router({
       path: '/',
       name: 'HomePage',
       component: HomePage
+    },
+    {
+      path: '/styleguide',
+      name: 'StyleGuide',
+      component: StyleGuide
     },
     {
       path: '/bot-profile',

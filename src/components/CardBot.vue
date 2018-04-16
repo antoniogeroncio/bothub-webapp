@@ -27,13 +27,13 @@
             Updated 2 weeks ago by <router-link class="url-author" to="/user-profile">{{ bot_author_name }}</router-link>
           </div>
           <ul class="card-bot__flags">
-            <li class="flags-item"><img src="../assets/images/flags/EN.png" alt="Flag ES"></li>
-            <li class="flags-item"><img src="../assets/images/flags/ES.png" alt="Flag ES"></li>
-            <li class="flags-item"><img src="../assets/images/flags/PT.png" alt="Flag PT"></li>
-            <li class="flags-item"><img src="../assets/images/flags/IT.png" alt="Flag IT"></li>
-            <li class="flags-item"><img src="../assets/images/flags/NL.png" alt="Flag NL"></li>
-            <li class="flags-item"><img src="../assets/images/flags/FR.png" alt="Flag FR"></li>
-            <li class="flags-item"><img src="../assets/images/flags/DE.png" alt="Flag DE"></li>
+            <flags flag-name="EN"/>
+            <flags flag-name="ES"/>
+            <flags flag-name="PT"/>
+            <flags flag-name="IT"/>
+            <flags flag-name="NL"/>
+            <flags flag-name="FR"/>
+            <flags flag-name="DE"/>
           </ul>
         </div>
 
@@ -42,13 +42,12 @@
         </div>
 
         <div class="card-bot__badge">
-          <span class="badge">cheers</span>
-          <span class="badge">bug</span>
-          <span class="badge">precaution</span>
-          <span class="badge">virus</span>
-          <span class="badge">disease</span>
-          <span class="badge">symptoms</span>
-          <span class="badge">...</span>
+          <badge badge-name="bug"/>
+          <badge badge-name="precaution"/>
+          <badge badge-name="virus"/>
+          <badge badge-name="disease"/>
+          <badge badge-name="symptoms"/>
+          <badge badge-name="..."/>
         </div>
       </div>
 
@@ -60,10 +59,14 @@
 
 <script>
 import UpDownVote from './UpDownVote.vue'
+import Badge from './shared/Badge'
+import Flags from './shared/Flags'
 
 export default {
   name: 'CardBot',
   components: {
+    Flags,
+    Badge,
     UpDownVote
   },
   data () {
