@@ -2,9 +2,9 @@
     <div class="card-bot">
 
       <ul class="bot-card__summary">
-        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">6547 issues </span><i class="material-icons">error_outline</i></a></li>
-        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">547 copy </span><i class="material-icons">content_copy</i></a></li>
-        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">321 stars </span><i class="material-icons">grade</i></a></li>
+        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">{{ summary.issues }} issues </span><i class="material-icons">error_outline</i></a></li>
+        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">{{ summary.copy }} copy </span><i class="material-icons">content_copy</i></a></li>
+        <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">{{ summary.stars }} stars </span><i class="material-icons">grade</i></a></li>
         <li class="bot-summary__item icon-update"><a href="#"><i class="material-icons">refresh</i></a></li>
       </ul>
 
@@ -38,16 +38,16 @@
         </div>
 
         <div class="card-bot__excerpt">
-          {{ bot_text }}
+          {{ bot_description }}
         </div>
 
         <div class="card-bot__badge">
-          <badge badge-name="bug"/>
-          <badge badge-name="precaution"/>
-          <badge badge-name="virus"/>
-          <badge badge-name="disease"/>
-          <badge badge-name="symptoms"/>
-          <badge badge-name="..."/>
+          <badge>bug</badge>
+          <badge>precaution</badge>
+          <badge>virus</badge>
+          <badge>disease</badge>
+          <badge>symptoms</badge>
+          <badge>...</badge>
         </div>
       </div>
 
@@ -74,7 +74,12 @@ export default {
       bot_title: 'Bot-ZicaVirus',
       bot_author: 'david_gazques',
       bot_author_name: 'David Gazques',
-      bot_text: 'A Swimming hundreds of feet beneath the ocean’s surface in many parts of the world are prolific architects calledlarvaceans. A Swimming hundreds of feet beneath the ocean’s surface in many parts of the architects called.'
+      bot_description: 'A Swimming hundreds of feet beneath the ocean’s surface in many parts of the world are prolific architects calledlarvaceans. A Swimming hundreds of feet beneath the ocean’s surface in many parts of the architects called.',
+      summary: {
+        issues: 6430,
+        stars: 321,
+        copy: 647
+      }
     }
   }
 }

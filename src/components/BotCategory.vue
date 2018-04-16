@@ -1,39 +1,24 @@
 <template>
-  <ul class="bot-category__list">
     <li class="bot-category__item">
-      <a class="bot-category__content bot-category__content--active" href="">All bots</a>
+      <span :class="categoryClass"><slot /></span>
     </li>
-    <li class="bot-category__item">
-      <a class="bot-category__content" href="">Business</a>
-    </li>
-    <li class="bot-category__item">
-      <a class="bot-category__content" href="">Communication</a>
-    </li>
-    <li class="bot-category__item">
-      <a class="bot-category__content" href="">Project</a>
-    </li>
-    <li class="bot-category__item">
-      <a class="bot-category__content" href="">Education</a>
-    </li>
-    <li class="bot-category__item">
-      <a class="bot-category__content" href="">Entertainment</a>
-    </li>
-    <li class="bot-category__item">
-      <a class="bot-category__content" href="">Finance</a>
-    </li>
-    <li class="bot-category__item">
-      <a class="bot-category__content" href="">Health</a>
-    </li>
-    <li class="bot-category__item">
-      <a class="bot-category__content" href="">Identity</a>
-    </li>
-  </ul>
 </template>
 
 <script>
 export default {
-  name: 'BotCategory'
-}
+  name: 'BotCategory',
+  props: {
+    status: {
+      type: String,
+    },
+  },
+  computed: {
+    categoryClass() {
+      if (!this.status) return 'bot-category__content';
+      return `bot-category__content bot-category__content--${this.status}`;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -62,6 +47,7 @@ export default {
       border-radius: 5px;
       color: #000;
       transition: all 0.2s ease-in-out;
+      cursor: pointer;
     &:hover,
     &--active {
        border-color: $primary-color;

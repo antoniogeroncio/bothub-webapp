@@ -19,6 +19,9 @@
       <li class="navbar__item">
         <router-link to="translate">Translate</router-link>
       </li>
+      <li class="navbar__item">
+        <router-link to="#">Historic</router-link>
+      </li>
     </ul>
   </div>
 </template>

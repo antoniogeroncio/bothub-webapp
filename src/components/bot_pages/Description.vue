@@ -5,12 +5,12 @@
 
         <div class="bot-tag-list">
           <span class="badge badge-desabled">tags:</span>
-          <span class="badge">cheers</span>
-          <span class="badge">bug</span>
-          <span class="badge">precaution</span>
-          <span class="badge">virus</span>
-          <span class="badge">disease</span>
-          <span class="badge">symptoms</span>
+          <badge>cheers</badge>
+          <badge>bug</badge>
+          <badge>precaution</badge>
+          <badge>virus</badge>
+          <badge>disease</badge>
+          <badge>symptoms</badge>
         </div>
 
         <div class="text">
@@ -27,8 +27,13 @@
 </template>
 
 <script>
+import Badge from '../shared/Badge'
+
 export default {
-  name: 'Description'
+  name: 'Description',
+  components: {
+    Badge
+  }
 }
 </script>
 

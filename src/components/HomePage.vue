@@ -13,7 +13,17 @@
 
     <div class="bot-category">
       <div class="container">
-          <bot-category/>
+        <ul class="bot-category__list">
+          <bot-category status="active">All</bot-category>
+          <bot-category>Business</bot-category>
+          <bot-category>Communication</bot-category>
+          <bot-category>Project</bot-category>
+          <bot-category>Education</bot-category>
+          <bot-category>Entertainment</bot-category>
+          <bot-category>Finance</bot-category>
+          <bot-category>Health</bot-category>
+          <bot-category>Identity</bot-category>
+        </ul>
       </div>
     </div>
 
@@ -37,7 +47,7 @@
         <h3 class="section-title">
           {{ top_bots }}
         </h3>
-        <card-bot/>
+        <card-bot title="ZicaVirus"/>
         <card-bot/>
         <card-bot/>
       </div>
@@ -95,6 +105,15 @@ export default {
 <style scoped lang="scss">
   @import '../assets/scss/_variables';
   @import '../assets/scss/_colors';
+
+  .bot-category__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .home-title {
     color: #FFF;
