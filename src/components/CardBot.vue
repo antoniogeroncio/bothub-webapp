@@ -1,12 +1,7 @@
 <template>
     <div class="card-bot">
 
-      <ul class="bot-card__summary">
-        <issues>{{ summary.issues }}</issues>
-        <forks>{{ summary.copy }}</forks>
-        <stars>{{ summary.stars }}</stars>
-        <li class="bot-summary__item icon-update"><a href="#"><i class="material-icons">refresh</i></a></li>
-      </ul>
+      <bot-summary/>
 
       <div class="bot-score">
         <up-down-vote/>
@@ -26,15 +21,7 @@
           <div class="card-bot__updated">
             Updated 2 weeks ago by <router-link class="url-author" to="/user-profile">{{ bot_author_name }}</router-link>
           </div>
-          <ul class="card-bot__flags">
-            <flags flag-name="EN"/>
-            <flags flag-name="ES"/>
-            <flags flag-name="PT"/>
-            <flags flag-name="IT"/>
-            <flags flag-name="NL"/>
-            <flags flag-name="FR"/>
-            <flags flag-name="DE"/>
-          </ul>
+          <flags/>
         </div>
 
         <div class="card-bot__excerpt">
@@ -61,31 +48,22 @@
 import UpDownVote from './UpDownVote.vue'
 import Badge from './shared/Badge'
 import Flags from './shared/Flags'
-import Stars from './bot_informations/Stars'
-import Issues from './bot_informations/Issues'
-import Forks from './bot_informations/Forks'
+import BotSummary from './bot_informations/BotSummary'
 
 export default {
   name: 'CardBot',
   components: {
     Flags,
-    Forks,
     Badge,
-    Stars,
-    Issues,
-    UpDownVote
+    UpDownVote,
+    BotSummary
   },
   data () {
     return {
       bot_title: 'Bot-ZicaVirus',
       bot_author: 'david_gazques',
       bot_author_name: 'David Gazques',
-      bot_description: 'A Swimming hundreds of feet beneath the ocean’s surface in many parts of the world are prolific architects calledlarvaceans. A Swimming hundreds of feet beneath the ocean’s surface in many parts of the architects called.',
-      summary: {
-        issues: 6430,
-        stars: 321,
-        copy: 647
-      }
+      bot_description: 'A Swimming hundreds of feet beneath the ocean’s surface in many parts of the world are prolific architects calledlarvaceans. A Swimming hundreds of feet beneath the ocean’s surface in many parts of the architects called.'
     }
   }
 }
@@ -184,87 +162,6 @@ export default {
   }
 
   //------------------------------
-  // Bot Summary
-  //------------------------------
-  .bot-card__summary {
-    color: $dark-grey;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: absolute;
-    top: 23px;
-    right: 28px;
-    display: flex;
-    justify-content: flex-end;
-
-    .bot-summary__item {
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      margin-left: 30px;
-
-      .material-icons {
-        margin-left: 10px;
-        font-size: 16px;
-      }
-
-      a {
-        display: flex;
-        align-items: center;
-        color: $dark-grey;
-        text-decoration: none;
-        transition: color 0.2s ease-in-out;
-
-        &:hover {
-          color: $primary-color;
-        }
-      }
-
-      @media (max-width: 992px) {
-        margin-left: 10px;
-        .material-icons {
-          margin-left: 4px;
-        }
-      }
-    }
-
-    @media (max-width: 768px) {
-      top: inherit;
-      right: inherit;
-      bottom: 20px;
-      left: 20px;
-
-      .bot-summary__item {
-        .material-icons {
-          margin-left: 0;
-          font-size: 18px;
-        }
-        margin-left: 0;
-        margin-right: 20px;
-
-        @media (max-width: 400px) {
-          margin-right: 10px;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-
-      .bot-summary__item-label {
-        display: none;
-      }
-    }
-
-    .icon-update {
-      display: none;
-      @media (max-width: 768px) {
-        display: initial;
-      }
-    }
-  }
-
-  //------------------------------
   // Bot Bot Info
   //------------------------------
   .card-bot__info {
@@ -296,40 +193,6 @@ export default {
 
     &:hover {
       color: $primary-color;
-    }
-  }
-
-  //------------------------------
-  // Bot Flags
-  //------------------------------
-  .card-bot__flags {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-
-    @media (max-width: 768px) {
-      background-color: #fff;
-      width: 100%;
-      margin-top: 7px;
-    }
-
-    @media (max-width: 400px) {
-      width: auto;
-    }
-
-    .flags-item {
-      width: 15px;
-      margin: 0 6px 0 0;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      img {
-        width: 100%;
-      }
     }
   }
 

@@ -27,12 +27,7 @@
                 <router-link to="update">{{ bot_url }}</router-link>
               </div>
 
-              <ul class="bot__summary">
-                <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">6547 issues </span><i class="material-icons">error_outline</i></a></li>
-                <li class="bot-summary__item"><a href="#"><span class="bot-summary__item-label">547 copy </span><i class="material-icons">content_copy</i></a></li>
-                <li class="bot-summary__item"><button class="btn btn-summary" @click="favorites"><span class="bot-summary__item-label">321 stars </span><i class="material-icons">grade</i></button></li>
-                <li class="bot-summary__item icon-update"><a href="#"><i class="material-icons">refresh</i></a></li>
-              </ul>
+              <bot-summary/>
             </div>
 
           </div>
@@ -57,20 +52,18 @@
 import UpDownVote from './UpDownVote'
 import TopBar from './TopBar'
 import SiteFooter from './SiteFooter'
-import CardBot from './CardBot'
-import FilterBot from './FilterBot'
 import NavBar from './NavBar'
 import BotSimulation from './bot_pages/BotSimulation'
+import BotSummary from './bot_informations/BotSummary'
 
 export default {
   name: 'BotProfile',
   components: {
-    CardBot,
+    BotSummary,
     TopBar,
     SiteFooter,
     UpDownVote,
     NavBar,
-    FilterBot,
     BotSimulation
   },
   data () {

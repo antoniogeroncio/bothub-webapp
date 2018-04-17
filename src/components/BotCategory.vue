@@ -9,16 +9,16 @@ export default {
   name: 'BotCategory',
   props: {
     status: {
-      type: String,
-    },
+      type: String
+    }
   },
   computed: {
-    categoryClass() {
-      if (!this.status) return 'bot-category__content';
-      return `bot-category__content bot-category__content--${this.status}`;
-    },
-  },
-};
+    categoryClass () {
+      if (!this.status) return 'bot-category__content'
+      return `bot-category__content bot-category__content--${this.status}`
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
