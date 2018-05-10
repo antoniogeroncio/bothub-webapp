@@ -51,4 +51,8 @@ body {
 .container-padding {
   padding: 0 8px;
 }
+
+.align-center {
+  align-items: center;
+}
 </style>
