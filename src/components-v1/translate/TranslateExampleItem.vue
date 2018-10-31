@@ -133,7 +133,7 @@ export default {
     onTranslated() {
       /* istanbul ignore next */
       this.$toast.open({
-        message: 'Example translated!',
+        message: 'Sentence translated!',
         type: 'is-success',
       });
       /* istanbul ignore next */

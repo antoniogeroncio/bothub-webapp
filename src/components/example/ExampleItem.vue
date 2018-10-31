@@ -134,7 +134,7 @@ export default {
     deleteThisExample() {
       return new Promise((resolve, reject) => {
         this.deleteDialog = this.$dialog.confirm({
-          message: 'Are you sure? The example will be deleted.',
+          message: 'Are you sure? The Sentence will be deleted.',
           confirmText: 'Delete',
           type: 'is-danger',
           onConfirm: async () => {

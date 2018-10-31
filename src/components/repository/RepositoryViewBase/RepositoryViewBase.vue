@@ -33,7 +33,7 @@
                 </div>
                 <div class="bh-grid__item">
                   <bh-icon value="botinho" />
-                  <span>{{ repository.examples__count }} examples</span>
+                  <span>{{ repository.examples__count }} Sentences</span>
                 </div>
               </div>
             </div>
