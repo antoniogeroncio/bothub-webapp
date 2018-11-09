@@ -1,22 +1,23 @@
 <template>
   <div>
-    <b-field label="Language">
+    <bh-field label="Language">
       <language-select v-model="language" />
-    </b-field>
-    <b-field label="Message">
-      <b-input
+    </bh-field>
+    <bh-field label="Message">
+      <bh-textarea
+        :rows="5"
         v-model="text"
         type="textarea" />
-    </b-field>
-    <b-tabs v-model="activeTab">
-      <b-tab-item label="cURL">
+    </bh-field>
+    <bh-tabs v-model="activeTab">
+      <bh-tab-item label="cURL">
         <bh-highlighted-pre code-class="curl">curl -X POST \
         -H 'Authorization: Bearer {{ authorizationUuid }}' \
         -F 'language={{ language }}' \
         -F "text={{ text_escaped.curl }}" \
         https://nlp.bothub.it/parse/</bh-highlighted-pre>
-      </b-tab-item>
-      <b-tab-item label="Python">
+      </bh-tab-item>
+      <bh-tab-item label="Python">
         <bh-highlighted-pre code-class="python">import requests
 
 data = {
@@ -27,8 +28,8 @@ data = {
 headers = { 'Authorization': 'Bearer {{ authorizationUuid }}' }
 r = requests.post('https://nlp.bothub.it/parse/', headers=headers, data=data)
 print(r.json())</bh-highlighted-pre>
-      </b-tab-item>
-      <b-tab-item label="Javascript">
+      </bh-tab-item>
+      <bh-tab-item label="Javascript">
         <bh-highlighted-pre code-class="javascript">var data = new FormData();
 data.append('language', '{{ language }}');
 data.append('text', '{{ text_escaped.javascript }}');
@@ -41,8 +42,8 @@ request.onload = function () {
 request.open('POST', 'https://nlp.bothub.it/parse/');
 request.setRequestHeader('Authorization', 'Bearer {{ authorizationUuid }}');
 request.send(data);</bh-highlighted-pre>
-      </b-tab-item>
-    </b-tabs>
+      </bh-tab-item>
+    </bh-tabs>
   </div>
 </template>
 

@@ -17,6 +17,12 @@ import BhText from './BhText';
 export default {
   name: 'BhTextarea',
   extends: BhText,
+  props: {
+    rows: {
+      type: Number,
+      default: 2,
+    },
+  },
   data() {
     return {
       className: 'bh-textarea',
@@ -29,15 +35,19 @@ export default {
   },
   async mounted() {
     await this.$nextTick();
+    this.textareaRows();
     this.updateTextareaHeight();
   },
   methods: {
+    textareaRows() {
+      this.$refs.input.rows = this.rows;
+    },
     updateTextareaHeight() {
       const { input } = this.$refs;
       const offset = input.offsetHeight - input.clientHeight;
       const computedStyle = window.getComputedStyle(input);
-      input.style.height = computedStyle.getPropertyValue('min-height');
-      input.style.height = `${offset + input.scrollHeight}px`;
+      input.style.height = computedStyle.getPropertyValue('height');
+      input.style.height = `${(offset + input.scrollHeight)}px`;
     },
   },
 };
