@@ -23,7 +23,7 @@
             v-if="repositoryList"
             :item-component="RepositoryCard"
             :list="repositoryList"
-            class="bh-grid home__repository-cards" />
+            class="bh-grid bh-grid--space-between home__repository-cards" />
           <p
             v-if="repositoryList && repositoryList.empty"
             class="has-text-centered">Repositories not found.</p>
@@ -96,7 +96,6 @@ export default {
 
   &__repository-cards {
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 </style>

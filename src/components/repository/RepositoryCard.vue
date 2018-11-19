@@ -2,11 +2,7 @@
   <bh-card
     shadow="light"
     class="repository-card">
-    <div class="bh-grid">
-      <div class="bh-grid__item">
-        <repository-info :repository="$attrs" />
-      </div>
-    </div>
+    <repository-info :repository="$attrs" />
   </bh-card>
 </template>
 
