@@ -24,7 +24,7 @@ export default {
 
 
 .repository-card {
-  margin: 1rem 0;
+  margin: 1rem;
   max-width: 30%;
   min-width: 30%;
 

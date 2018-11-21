@@ -89,5 +89,6 @@ export default {
 <style lang="scss" scoped>
 .next {
   margin: 1rem 0;
+  width: 100%;
 }
 </style>
