@@ -1,3 +1,4 @@
+import BH from 'bh';
 import Buefy from 'buefy';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import RequestGenerator from '@/components-v1/repository/RequestGenerator';
@@ -5,6 +6,7 @@ import RequestGenerator from '@/components-v1/repository/RequestGenerator';
 
 const localVue = createLocalVue();
 localVue.use(Buefy);
+localVue.use(BH);
 
 describe('RepositoryCard.vue', () => {
   let wrapper;

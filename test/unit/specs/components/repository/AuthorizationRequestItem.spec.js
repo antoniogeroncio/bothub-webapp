@@ -1,9 +1,10 @@
 /* eslint-disable import/first */
 jest.mock('@/api/request');
 
+import Bh from 'bh';
 import Buefy from 'buefy';
 import Vuex from 'vuex';
-import { shallowMount, createLocalVue } from '@vue/test-utils';
+import { mount, createLocalVue } from '@vue/test-utils';
 import store from '@/store';
 import AuthorizationRequestItem from '@/components/repository/AuthorizationRequestItem';
 
@@ -11,6 +12,7 @@ import AuthorizationRequestItem from '@/components/repository/AuthorizationReque
 const localVue = createLocalVue();
 localVue.use(Buefy);
 localVue.use(Vuex);
+localVue.use(Bh);
 
 describe('AuthorizationRequestItem.vue', () => {
   let wrapper;
@@ -23,7 +25,7 @@ describe('AuthorizationRequestItem.vue', () => {
         profiles: {},
       },
     });
-    wrapper = shallowMount(AuthorizationRequestItem, {
+    wrapper = mount(AuthorizationRequestItem, {
       localVue,
       store,
       propsData: {

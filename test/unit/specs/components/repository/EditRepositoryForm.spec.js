@@ -1,6 +1,7 @@
 /* eslint-disable import/first */
 jest.mock('@/api/request');
 
+import Bh from 'bh';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import store from '@/store';
 import TYPES from '@/store/types';
@@ -8,6 +9,7 @@ import EditRepositoryForm from '@/components/repository/EditRepositoryForm';
 
 
 const localVue = createLocalVue();
+localVue.use(Bh);
 
 describe('EditRepositoryForm.vue', () => {
   let wrapper;

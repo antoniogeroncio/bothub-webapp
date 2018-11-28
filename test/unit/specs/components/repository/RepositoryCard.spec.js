@@ -5,10 +5,12 @@ import BH from 'bh';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import store from '@/store';
 import RepositoryCard from '@/components/repository/RepositoryCard';
+import VueRouter from 'vue-router';
 
 
 const localVue = createLocalVue();
 localVue.use(BH);
+localVue.use(VueRouter);
 
 describe('RepositoryCard.vue', () => {
   let wrapper;

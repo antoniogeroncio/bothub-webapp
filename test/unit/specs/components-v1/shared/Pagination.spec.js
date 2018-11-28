@@ -4,9 +4,11 @@ jest.mock('@/api/request');
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import repository from '@/api/repository';
 import Pagination from '@/components-v1/shared/Pagination';
+import applyFilters from '@/utils/filters';
 
 
 const localVue = createLocalVue();
+applyFilters(localVue);
 
 const Foo = localVue.component('foo', { render: () => ('<div />') });
 

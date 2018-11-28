@@ -1,6 +1,7 @@
 /* eslint-disable import/first */
 jest.mock('@/api/request');
 
+import Bh from 'bh';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import store from '@/store';
 import TYPES from '@/store/types';
@@ -8,6 +9,7 @@ import RequestAuthorizationForm from '@/components/repository/RequestAuthorizati
 
 
 const localVue = createLocalVue();
+localVue.use(Bh);
 
 describe('RequestAuthorizationForm.vue', () => {
   let wrapper;
